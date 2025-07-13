@@ -13,6 +13,7 @@ function App() {
 
 	useEffect(() => {
 		const root = document.getElementById("root");
+
 		if (lightTheme) {
 			root.classList.add("light");
 		} else {
@@ -38,6 +39,12 @@ function App() {
 				return true;
 			}
 		});
+	};
+
+	const copyEmail = () => {
+		const email = document.getElementById("Email");
+
+		navigator.clipboard.writeText(email.innerHTML);
 	};
 
 	return (
@@ -134,12 +141,12 @@ function App() {
 					<h2>Drop me a line.</h2>
 					<p>
 						Email me at{" "}
-						<a href="mailto:hello@midhatkazmi.com">
+						<a id="Email" href="mailto:hello@midhatkazmi.com">
 							hello@midhatkazmi.com
 						</a>
 						.
 					</p>
-					<button type="button">
+					<button onClick={copyEmail} type="button">
 						<svg
 							className="icon"
 							xmlns="http://www.w3.org/2000/svg"
