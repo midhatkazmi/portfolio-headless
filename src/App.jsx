@@ -5,13 +5,33 @@ import Posts from "./templates/Posts";
 import Post from "./templates/Post";
 import Contact from "./templates/Contact";
 import Page from "./templates/Page";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function App() {
 	const [navHidden, setNavHidden] = useState(true);
+	const [lightTheme, setLightTheme] = useState(false);
+
+	useEffect(() => {
+		const root = document.getElementById("root");
+		if (lightTheme) {
+			root.classList.add("light");
+		} else {
+			root.classList.remove("light");
+		}
+	}, [lightTheme]);
 
 	const toggleNav = () => {
 		setNavHidden(function (prevState) {
+			if (prevState === true) {
+				return false;
+			} else {
+				return true;
+			}
+		});
+	};
+
+	const toggleTheme = () => {
+		setLightTheme(function (prevState) {
 			if (prevState === true) {
 				return false;
 			} else {
@@ -31,7 +51,11 @@ function App() {
 					{/* </p> */}
 					{/* </div> */}
 					<div className="buttons">
-						<button id="Theme-Btn" type="button">
+						<button
+							id="Theme-Btn"
+							onClick={toggleTheme}
+							type="button"
+						>
 							<svg
 								className="icon"
 								xmlns="http://www.w3.org/2000/svg"

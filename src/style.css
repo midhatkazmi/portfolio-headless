@@ -367,3 +367,18 @@ a.wp-block-button__link {
 	background-color: var(--base2);
 	border-radius: 0.5rem;
 }
+
+/* ----------------------------------------------------------------- */
+
+div#root.light,
+div#root.light * {
+	--contrast: var(--contrast2);
+	--contrast1: hsl(0, 0%, 10%);
+	--contrast2: hsl(0, 0%, 20%);
+	--contrast3: hsl(0, 0%, 30%);
+	--contrast4: hsl(0, 0%, 40%);
+	--base4: hsl(0, 0%, 60%);
+	--base3: hsl(0, 0%, 70%);
+	--base2: hsl(0, 0%, 80%);
+	--base1: hsl(0, 0%, 90%);
+}
