@@ -106,9 +106,17 @@ header path {
 }
 
 header nav {
-	display: none;
+	/* display: none; */
 
 	text-align: center;
+}
+
+nav.nav-hidden {
+	display: none;
+}
+
+nav.nav-visible {
+	display: block;
 }
 
 header nav a {
@@ -141,7 +149,7 @@ header nav a {
 		display: none;
 	}
 
-	header nav {
+	nav.nav-hidden {
 		display: block;
 	}
 
