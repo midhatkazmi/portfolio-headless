@@ -6,6 +6,11 @@
 - HEADER
 - FOOTER
 - SECTIONS
+	- LANDING
+	- WORK
+	- ABOUT
+- ARTICLES
+	- ABOUT
 - HEADINGS
 - PARAGRAPHS
 - LINKS
@@ -214,22 +219,34 @@ section + section {
 	border-top: dashed 1px var(--base2);
 }
 
+/* LANDING */
 section.landing {
 	height: calc(100vh - var(--header-height));
 }
 
+/* WORK */
 section#Work li {
 	display: block;
 	margin: 4rem 0;
 }
 
-div.taxonomy-post_tag {
+div.taxonomy-post_tag span {
+	display: none;
+}
+
+/* TAGS */
+div.taxonomy-post_tag,
+ul.wp-block-categories-list,
+ul.wp-block-list {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin: 1rem;
 }
 
-div.taxonomy-post_tag a {
+div.taxonomy-post_tag a,
+ul.wp-block-categories-list li,
+ul.wp-block-list li {
 	display: block;
 	padding: 0.5rem;
 
@@ -238,10 +255,6 @@ div.taxonomy-post_tag a {
 
 	font-size: 0.75rem;
 	font-weight: 500;
-}
-
-div.taxonomy-post_tag span {
-	display: none;
 }
 
 @media screen and (min-width: 64em) {
@@ -253,6 +266,21 @@ div.taxonomy-post_tag span {
 
 	section#Work ul {
 		display: flex;
+	}
+}
+
+/* ----------------------------------------------------------------- */
+
+/* ARTICLES */
+section article {
+	margin-top: 4rem;
+}
+
+/* ABOUT */
+@media screen and (min-width: 64em) {
+	div.tools {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
 	}
 }
 

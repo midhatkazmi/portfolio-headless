@@ -108,9 +108,9 @@ function App() {
 								Home
 							</NavLink>
 						</li>
-						<li>
+						{/* <li>
 							<NavLink to="/work">Work</NavLink>
-						</li>
+						</li> */}
 						<li>
 							<NavLink to="/about">About</NavLink>
 						</li>
