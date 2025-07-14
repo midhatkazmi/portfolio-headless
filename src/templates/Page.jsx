@@ -27,7 +27,7 @@ const Page = ({ pageID }) => {
 				<>
 					<title>{`${restData.title.rendered} | Portfolio Headless`}</title>
 					<article id={`post-${restData.id}`}>
-						<h1>{restData.title.rendered}</h1>
+						{/* <h1>{restData.title.rendered}</h1> */}
 						<div
 							className="entry-content"
 							dangerouslySetInnerHTML={{

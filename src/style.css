@@ -10,6 +10,7 @@
 - PARAGRAPHS
 - LINKS
 - BUTTONS
+- IMAGES
 - SVGS
 */
 
@@ -107,8 +108,6 @@ header path {
 }
 
 header nav {
-	/* display: none; */
-
 	text-align: center;
 }
 
@@ -139,6 +138,11 @@ header nav a {
 	header a:hover,
 	header a:focus {
 		text-decoration: underline;
+	}
+
+	header button:hover,
+	header button:focus {
+		background-color: var(--accent);
 	}
 
 	button#Theme-Btn {
@@ -211,11 +215,12 @@ section.landing {
 
 section#Work li {
 	display: block;
-	padding: 1rem;
 }
 
 @media screen and (min-width: 64em) {
 	section {
+		max-width: 120rem;
+		margin: auto;
 		padding: 8rem;
 	}
 
@@ -242,8 +247,10 @@ h2 {
 }
 
 h3 {
-	font-size: 1rem;
-	font-weight: 600;
+	margin: 1rem;
+
+	font-size: 1.25rem;
+	font-weight: 500;
 }
 
 h3::after {
@@ -333,6 +340,13 @@ footer button div {
 
 	font-size: 0.75rem;
 	font-weight: 500;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* IMAGES */
+img {
+	display: block;
 }
 
 /* ----------------------------------------------------------------- */
