@@ -9,6 +9,7 @@
 	- LANDING
 	- WORK
 	- ABOUT
+	- CONTACT
 - ARTICLES
 	- ABOUT
 - HEADINGS
@@ -233,6 +234,25 @@ section#Work li {
 
 div.taxonomy-post_tag span {
 	display: none;
+}
+
+/* CONTACT */
+article#post-26 div.wp-block-buttons {
+	margin: 4rem 1rem 1rem 1rem;
+
+	text-align: center;
+}
+
+article#post-26 a.wp-element-button {
+	width: 100%;
+}
+
+@media screen and (min-width: 64em) {
+	article#post-26 div.wp-block-buttons {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
 }
 
 /* TAGS */
