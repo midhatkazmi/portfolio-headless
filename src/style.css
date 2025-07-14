@@ -17,6 +17,7 @@
 - BUTTONS
 - IMAGES
 - SVGS
+- LOADING GIF
 */
 
 /* ----------------------------------------------------------------- */
@@ -427,6 +428,15 @@ svg.logo {
 path {
 	fill: currentColor;
 	fill-rule: evenodd;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* LOADING ICON */
+img.loading {
+	margin: auto;
+	height: calc(100vh - var(--header-height));
+	object-fit: scale-down;
 }
 
 /* ----------------------------------------------------------------- */
