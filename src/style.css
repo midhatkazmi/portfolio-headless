@@ -145,6 +145,11 @@ header nav a {
 		background-color: var(--accent);
 	}
 
+	div#root.light header button:hover path,
+	div#root.light header button:focus path {
+		fill: var(--base);
+	}
+
 	button#Theme-Btn {
 		position: absolute;
 		right: 0;
@@ -215,6 +220,11 @@ section.landing {
 
 section#Work li {
 	display: block;
+	margin: 4rem 0;
+}
+
+div.taxonomy-post_tag {
+	display: none;
 }
 
 @media screen and (min-width: 64em) {
@@ -270,7 +280,6 @@ h3::after {
 		margin-bottom: 1rem;
 
 		font-size: 1.5rem;
-		font-weight: 500;
 	}
 }
 
@@ -345,6 +354,10 @@ footer button div {
 /* ----------------------------------------------------------------- */
 
 /* IMAGES */
+figure {
+	margin: 1rem;
+}
+
 img {
 	display: block;
 }
