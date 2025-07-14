@@ -224,6 +224,23 @@ section#Work li {
 }
 
 div.taxonomy-post_tag {
+	display: flex;
+	gap: 0.5rem;
+	margin: 1rem;
+}
+
+div.taxonomy-post_tag a {
+	display: block;
+	padding: 0.5rem;
+
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+div.taxonomy-post_tag span {
 	display: none;
 }
 
