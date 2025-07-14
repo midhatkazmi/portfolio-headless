@@ -232,6 +232,13 @@ section#Work li {
 	margin: 4rem 0;
 }
 
+summary {
+	margin: 1rem 1rem 0 1rem;
+
+	font-size: 1.125rem;
+	font-weight: 600;
+}
+
 div.taxonomy-post_tag span {
 	display: none;
 }
