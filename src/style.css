@@ -293,7 +293,8 @@ ul.wp-block-list li {
 	}
 
 	section#Work ul {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
