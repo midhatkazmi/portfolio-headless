@@ -8,34 +8,48 @@ import Post from "./templates/Post";
 import { useEffect, useState } from "react";
 
 function App() {
+	// const [navVisible, setNavVisible] = useState(false);
+	// const [darkTheme, setDarkTheme] = useState(false);
 	const [navHidden, setNavHidden] = useState(true);
 	const [lightTheme, setLightTheme] = useState(false);
 
 	useEffect(() => {
 		const root = document.getElementById("root");
 
+		// if (darkTheme) {
 		if (lightTheme) {
+			// root.classList.add("dark");
 			root.classList.add("light");
 		} else {
+			// root.classList.remove("dark");
 			root.classList.remove("light");
 		}
+		// }, [darkTheme]);
 	}, [lightTheme]);
 
 	const toggleNav = () => {
+		// setNavVisible(function (prevState) {
 		setNavHidden(function (prevState) {
+			// if (prevState === false) {
 			if (prevState === true) {
+				// return true;
 				return false;
 			} else {
+				// return false;
 				return true;
 			}
 		});
 	};
 
 	const toggleTheme = () => {
+		// setDarkTheme(function (prevState) {
 		setLightTheme(function (prevState) {
+			// if (prevState === false) {
 			if (prevState === true) {
+				// return true;
 				return false;
 			} else {
+				// return false;
 				return true;
 			}
 		});
