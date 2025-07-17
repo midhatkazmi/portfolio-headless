@@ -3,22 +3,9 @@
 - IMPORTS
 - VARIABLES
 - BODY
-- HEADER
-- FOOTER
-- SECTIONS
-	- LANDING
-	- WORK
-	- ABOUT
-	- CONTACT
-- ARTICLES
-	- ABOUT
-- HEADINGS
-- PARAGRAPHS
-- LINKS
 - BUTTONS
 - IMAGES
 - SVGS
-- LOADING GIF
 */
 
 /* ----------------------------------------------------------------- */
@@ -30,30 +17,26 @@
 
 /* VARIABLES */
 * {
-	/* --base: var(--base1); */
-	/* --contrast: var(--contrast1); */
-	/* --accent: crimson; */
 	/* --black: black; */
-	/* --base1: hsl(0, 0%, 10%); */
-	/* --base2: hsl(0, 0%, 20%); */
-	/* --base3: hsl(0, 0%, 30%); */
-	/* --base4: hsl(0, 0%, 40%); */
-	/* --gray: hsl(0, 0%, 50%); */
-	/* --contrast4: hsl(0, 0%, 60%); */
-	/* --contrast3: hsl(0, 0%, 70%); */
-	/* --contrast2: hsl(0, 0%, 80%); */
-	/* --contrast1: hsl(0, 0%, 90%); */
+	--gray1: hsl(0, 0%, 10%);
+	--gray: hsl(0, 0%, 50%);
+	--gray8: hsl(0, 0%, 80%);
+	--gray9: hsl(0, 0%, 90%);
 	/* --white: white; */
+	--base: var(--gray9);
+	--base2: var(--gray8);
+	--contrast: var(--gray1);
+	--accent: royalblue;
 
-	/* --header-height: 3.0625rem; */
+	--header-height: 3rem;
 
-	/* margin: 0; */
-	/* padding: 0; */
+	margin: 0;
+	padding: 0;
 
-	/* font-family: "GeneralSans-Variable", "Noto Emoji Color", sans-serif; */
-	/* line-height: 1; */
+	font-family: "GeneralSans-Variable", "Noto Emoji Color", sans-serif;
+	line-height: 1;
 
-	/* scroll-behavior: smooth; */
+	scroll-behavior: smooth;
 	/* transition: all 0.25s; */
 }
 
@@ -63,8 +46,8 @@
 div#root {
 	/* margin-bottom: var(--header-height); */
 
-	/* background-color: var(--base); */
-	/* color: var(--contrast); */
+	background-color: var(--base);
+	color: var(--contrast);
 }
 
 @media screen and (min-width: 64em) {
@@ -386,7 +369,7 @@ a {
 button {
 	/* border: none; */
 
-	/* cursor: pointer; */
+	cursor: pointer;
 }
 
 header button {
@@ -427,14 +410,14 @@ figure {
 }
 
 img {
-	/* display: block; */
+	display: block;
 }
 
 /* ----------------------------------------------------------------- */
 
 /* SVGS */
 svg {
-	/* display: block; */
+	display: block;
 	max-width: 100%;
 	height: auto;
 }
