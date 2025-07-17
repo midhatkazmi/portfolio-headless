@@ -3,6 +3,7 @@
 - IMPORTS
 - VARIABLES
 - BODY
+- LINKS
 - BUTTONS
 - IMAGES
 - SVGS
@@ -17,6 +18,8 @@
 
 /* VARIABLES */
 * {
+	--header-height: 3rem;
+
 	/* --black: black; */
 	--gray1: hsl(0, 0%, 10%);
 	--gray: hsl(0, 0%, 50%);
@@ -27,8 +30,6 @@
 	--base2: var(--gray8);
 	--contrast: var(--gray1);
 	--accent: royalblue;
-
-	--header-height: 3rem;
 
 	margin: 0;
 	padding: 0;
@@ -358,9 +359,9 @@ p a:focus {
 
 /* LINKS */
 a {
-	/* color: currentColor; */
+	color: currentColor;
 
-	/* text-decoration: none; */
+	text-decoration: none;
 }
 
 /* ----------------------------------------------------------------- */
@@ -433,7 +434,7 @@ svg.logo {
 }
 
 path {
-	/* fill: currentColor; */
+	fill: currentColor;
 	/* fill-rule: evenodd; */
 }
 

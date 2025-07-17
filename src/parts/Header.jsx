@@ -1,6 +1,7 @@
-import logo from "./../assets/img/logo.svg";
 import { Link, NavLink } from "react-router-dom";
 // import { useEffect, useState } from "react";
+import "./Header.css";
+import logo from "./../assets/img/logo.svg";
 
 function Header() {
 	// const [navVisible, setNavVisible] = useState(false);
@@ -39,13 +40,13 @@ function Header() {
 	return (
 		<>
 			<header>
-				<div>
-					<div>
+				<div className="bar">
+					<Link className="logotype" to="/">
 						<img src={logo} alt="Midhat Kazmi Logo" />
-						<Link to="/">Midhat Kazmi</Link>
-					</div>
+						<div>Midhat Kazmi</div>
+					</Link>
 
-					<div>
+					<div className="buttons">
 						{/* <button onClick={toggleTheme} type="button"> */}
 						<button type="button">
 							<svg
