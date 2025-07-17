@@ -22,6 +22,7 @@
 
 	/* --black: black; */
 	--gray1: hsl(0, 0%, 10%);
+	--gray2: hsl(0, 0%, 20%);
 	--gray: hsl(0, 0%, 50%);
 	--gray8: hsl(0, 0%, 80%);
 	--gray9: hsl(0, 0%, 90%);
@@ -45,7 +46,7 @@
 
 /* BODY */
 div#root {
-	/* margin-bottom: var(--header-height); */
+	margin-bottom: var(--header-height);
 
 	background-color: var(--base);
 	color: var(--contrast);
@@ -472,4 +473,11 @@ div#root.light * {
 	/* --base3: hsl(0, 0%, 70%); */
 	/* --base2: hsl(0, 0%, 80%); */
 	/* --base1: hsl(0, 0%, 90%);1 */
+}
+
+div#root.dark,
+div#root.dark * {
+	--base: var(--gray1);
+	--base2: var(--gray2);
+	--contrast: var(--gray9);
 }

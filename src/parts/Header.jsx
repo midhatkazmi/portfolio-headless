@@ -1,41 +1,41 @@
 import { Link, NavLink } from "react-router-dom";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
 import logo from "./../assets/img/logo.svg";
 
 function Header() {
-	// const [navVisible, setNavVisible] = useState(false);
-	// const [darkTheme, setDarkTheme] = useState(false);
+	const [navVisible, setNavVisible] = useState(false);
+	const [darkTheme, setDarkTheme] = useState(false);
 
-	// useEffect(() => {
-	// 	const root = document.getElementById("root");
+	function toggleNav() {
+		setNavVisible(function (prevState) {
+			if (prevState === false) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+	}
 
-	// 	if (darkTheme) {
-	// 		root.classList.add("dark");
-	// 	} else {
-	// 		root.classList.remove("dark");
-	// 	}
-	// }, [darkTheme]);
+	function toggleTheme() {
+		setDarkTheme(function (prevState) {
+			if (prevState === false) {
+				return true;
+			} else {
+				return false;
+			}
+		});
+	}
 
-	// const toggleNav = () => {
-	// 	setNavVisible(function (prevState) {
-	// 		if (prevState === false) {
-	// 			return true;
-	// 		} else {
-	// 			return false;
-	// 		}
-	// 	});
-	// };
+	useEffect(() => {
+		const root = document.getElementById("root");
 
-	// const toggleTheme = () => {
-	// 	setDarkTheme(function (prevState) {
-	// 		if (prevState === false) {
-	// 			return true;
-	// 		} else {
-	// 			return false;
-	// 		}
-	// 	});
-	// };
+		if (darkTheme === true) {
+			root.classList.add("dark");
+		} else {
+			root.classList.remove("dark");
+		}
+	}, [darkTheme]);
 
 	return (
 		<>
@@ -47,8 +47,7 @@ function Header() {
 					</Link>
 
 					<div className="buttons">
-						{/* <button onClick={toggleTheme} type="button"> */}
-						<button type="button">
+						<button onClick={toggleTheme} type="button">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								height="24px"
@@ -61,35 +60,32 @@ function Header() {
 							</svg>
 						</button>
 
-						{/* <button onClick={toggleNav} type="button"> */}
-						<button type="button">
+						<button onClick={toggleNav} type="button">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								height="24px"
 								viewBox="0 -960 960 960"
 								width="24px"
 								role="img"
-								aria-label="Nav Icon"
-								// aria-label={
-								// 	navVisible ? "Close Icon" : "Nav Icon"
-								// }
+								aria-label={
+									navVisible === false
+										? "Nav Icon"
+										: "Close Icon"
+								}
 							>
 								<path
-									d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"
-									// d={
-									// 	navVisible
-									// 		? "M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z"
-									// 		: "M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"
-									// }
+									d={
+										navVisible === false
+											? "M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"
+											: "M480-424 284-228q-11 11-28 11t-28-11q-11-11-11-28t11-28l196-196-196-196q-11-11-11-28t11-28q11-11 28-11t28 11l196 196 196-196q11-11 28-11t28 11q11 11 11 28t-11 28L536-480l196 196q11 11 11 28t-11 28q-11 11-28 11t-28-11L480-424Z"
+									}
 								/>
 							</svg>
 						</button>
 					</div>
 				</div>
 
-				<nav
-				// className={navVisible ? "nav-visible" : "nav-hidden"}
-				>
+				<nav className={navVisible === false ? "hidden" : "visible"}>
 					<ul>
 						<li>
 							<NavLink to="/" end>

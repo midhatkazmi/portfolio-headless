@@ -8,6 +8,8 @@ header {
 
 	background-color: var(--base);
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+	font-weight: 500;
 }
 
 header div.bar {
@@ -47,10 +49,20 @@ header svg {
 	height: 1rem;
 }
 
-header nav {
-	/* display: none; */
+header path {
+	fill: var(--contrast);
+}
 
+header nav {
 	text-align: center;
+}
+
+header nav.hidden {
+	display: none;
+}
+
+header nav.visible {
+	display: block;
 }
 
 header nav a {
