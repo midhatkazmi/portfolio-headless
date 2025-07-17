@@ -1,10 +1,10 @@
 import { Route, Routes, Link, NavLink } from "react-router-dom";
 import ScrollToTop from "./utilities/ScrollToTop";
 import Home from "./templates/Home";
-import Posts from "./templates/Posts";
-import Post from "./templates/Post";
 import Contact from "./templates/Contact";
 import Page from "./templates/Page";
+import Posts from "./templates/Posts";
+import Post from "./templates/Post";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -108,9 +108,9 @@ function App() {
 								Home
 							</NavLink>
 						</li>
-						{/* <li>
+						<li>
 							<NavLink to="/work">Work</NavLink>
-						</li> */}
+						</li>
 						<li>
 							<NavLink to="/about">About</NavLink>
 						</li>

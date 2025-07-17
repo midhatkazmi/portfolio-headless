@@ -51,11 +51,11 @@ const Posts = () => {
 										__html: post.excerpt.rendered,
 									}}
 								></div>
-								<div
+								{/* <div
 									dangerouslySetInnerHTML={{
 										__html: post.acf.project_tools,
 									}}
-								></div>
+								></div> */}
 							</article>
 						))}
 					</section>

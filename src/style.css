@@ -25,7 +25,6 @@
 
 /* IMPORTS */
 @import url("general-sans.css");
-@import url("noto-emoji.css");
 
 /* ----------------------------------------------------------------- */
 
@@ -51,8 +50,7 @@
 	margin: 0;
 	padding: 0;
 
-	/* font-family: "GeneralSans-Variable", "NotoEmoji-Variable", sans-serif; */
-	font-family: "GeneralSans-Variable", sans-serif;
+	font-family: "GeneralSans-Variable", "Noto Emoji Color", sans-serif;
 	line-height: 1;
 
 	scroll-behavior: smooth;
@@ -335,10 +333,6 @@ h3 {
 
 	font-size: 1.25rem;
 	font-weight: 500;
-}
-
-h3::after {
-	content: " \2192";
 }
 
 @media screen and (min-width: 64em) {
