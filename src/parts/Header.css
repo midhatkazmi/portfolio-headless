@@ -71,10 +71,6 @@ header nav.visible {
 	display: block;
 }
 
-header li {
-	display: block;
-}
-
 header nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
@@ -96,6 +92,11 @@ div#root.dark header {
 		align-items: center;
 	}
 
+	header a:hover,
+	header a:focus {
+		text-decoration: underline;
+	}
+
 	header img {
 		height: 2rem;
 	}
@@ -110,6 +111,16 @@ div#root.dark header {
 		display: none;
 	}
 
+	header button:hover,
+	header button:focus {
+		background-color: var(--accent);
+	}
+
+	header button:hover path,
+	header button:focus path {
+		fill: var(--base);
+	}
+
 	header nav.hidden {
 		display: block;
 	}
@@ -118,9 +129,18 @@ div#root.dark header {
 		display: flex;
 	}
 
+	header li {
+		display: block;
+	}
+
 	header nav a {
 		padding: 1.5rem 1rem;
 
 		border: none;
+	}
+
+	div#root.dark header {
+		border: none;
+		border-bottom: solid 0.0625rem var(--base2);
 	}
 }
