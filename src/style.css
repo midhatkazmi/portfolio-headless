@@ -477,6 +477,8 @@ div#root.light * {
 
 div#root.dark,
 div#root.dark * {
+	--header-height: 3.0625rem;
+
 	--base: var(--gray1);
 	--base2: var(--gray2);
 	--contrast: var(--gray9);

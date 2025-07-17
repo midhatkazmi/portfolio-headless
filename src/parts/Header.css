@@ -68,3 +68,7 @@ header nav.visible {
 header nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
+
+div#root.dark header {
+	border-top: solid 0.0625rem var(--base2);
+}
