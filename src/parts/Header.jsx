@@ -60,7 +60,11 @@ function Header() {
 							</svg>
 						</button>
 
-						<button onClick={toggleNav} type="button">
+						<button
+							className="nav"
+							onClick={toggleNav}
+							type="button"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								height="24px"

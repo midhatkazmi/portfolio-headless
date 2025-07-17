@@ -1,3 +1,9 @@
+/* TABLE OF CONTENTS */
+/*
+- DARK THEME
+- DESKTOP
+*/
+
 header {
 	display: flex;
 	flex-direction: column-reverse;
@@ -65,10 +71,56 @@ header nav.visible {
 	display: block;
 }
 
+header li {
+	display: block;
+}
+
 header nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
 
 div#root.dark header {
 	border-top: solid 0.0625rem var(--base2);
+}
+
+@media screen and (min-width: 64em) {
+	header {
+		position: sticky;
+		top: 0;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-right: 5.0625rem;
+	}
+
+	header a.logotype {
+		align-items: center;
+	}
+
+	header img {
+		height: 2rem;
+	}
+
+	header button {
+		position: absolute;
+		right: 0;
+		padding: 1.5rem;
+	}
+
+	header button.nav {
+		display: none;
+	}
+
+	header nav.hidden {
+		display: block;
+	}
+
+	header ul {
+		display: flex;
+	}
+
+	header nav a {
+		padding: 1.5rem 1rem;
+
+		border: none;
+	}
 }
