@@ -21,3 +21,11 @@ footer small {
 footer a {
 	font-weight: 600;
 }
+
+@media screen and (min-width: 64em) {
+	footer {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+}

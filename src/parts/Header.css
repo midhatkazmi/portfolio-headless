@@ -118,7 +118,7 @@ div#root.dark header {
 
 	header button:hover path,
 	header button:focus path {
-		fill: var(--base);
+		fill: var(--gray9);
 	}
 
 	header nav.hidden {
