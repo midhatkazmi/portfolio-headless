@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
 import FeaturedImage from "../utilities/FeaturedImage";
+import "./Posts.css";
 
 const Posts = () => {
 	const restPath = restBase + "posts?_embed";
@@ -28,7 +29,7 @@ const Posts = () => {
 			{isLoaded ? (
 				<>
 					<title>Work | Portfolio Headless</title>
-					<section>
+					<section className="posts">
 						<h1>My Work</h1>
 						{restData.map((post) => (
 							<article key={post.id} id={`post-${post.id}`}>
@@ -42,15 +43,17 @@ const Posts = () => {
 											}
 										/>
 									)}
-								<Link to={`/work/${post.slug}`}>
+								<div>
+									{/* <Link to={`/work/${post.slug}`}> */}
 									<h2>{post.title.rendered}</h2>
-								</Link>
-								<div
-									className="entry-content"
-									dangerouslySetInnerHTML={{
-										__html: post.excerpt.rendered,
-									}}
-								></div>
+									{/* </Link> */}
+									<div
+										className="entry-content"
+										dangerouslySetInnerHTML={{
+											__html: post.excerpt.rendered,
+										}}
+									></div>
+								</div>
 								{/* <div
 									dangerouslySetInnerHTML={{
 										__html: post.acf.project_tools,

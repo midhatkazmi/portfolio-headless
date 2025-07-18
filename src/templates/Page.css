@@ -1,0 +1,21 @@
+article.page ul.wp-block-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem;
+}
+
+article.page ul.wp-block-list li {
+	display: block;
+	padding: 0.5rem;
+
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+div#root.dark article.page ul.wp-block-list li {
+	border-color: var(--base2);
+}

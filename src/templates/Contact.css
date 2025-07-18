@@ -1,0 +1,6 @@
+@media screen and (min-width: 64em) {
+	article.contact div.wp-block-buttons {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
