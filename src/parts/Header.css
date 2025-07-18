@@ -28,6 +28,11 @@ header a {
 	padding: 1rem;
 }
 
+header a:hover,
+header a:focus {
+	text-decoration: underline;
+}
+
 header a.logotype {
 	display: flex;
 	gap: 1rem;
@@ -57,6 +62,16 @@ header svg {
 
 header path {
 	fill: var(--contrast);
+}
+
+header button:hover,
+header button:focus {
+	background-color: var(--accent);
+}
+
+header button:hover path,
+header button:focus path {
+	fill: var(--gray9);
 }
 
 header nav {
@@ -92,11 +107,6 @@ div#root.dark header {
 		align-items: center;
 	}
 
-	header a:hover,
-	header a:focus {
-		text-decoration: underline;
-	}
-
 	header img {
 		height: 2rem;
 	}
@@ -109,16 +119,6 @@ div#root.dark header {
 
 	header button.nav {
 		display: none;
-	}
-
-	header button:hover,
-	header button:focus {
-		background-color: var(--accent);
-	}
-
-	header button:hover path,
-	header button:focus path {
-		fill: var(--gray9);
 	}
 
 	header nav.hidden {

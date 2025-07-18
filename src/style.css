@@ -3,6 +3,7 @@
 - IMPORTS
 - VARIABLES
 - BODY
+- MAIN
 - LINKS
 - BUTTONS
 - IMAGES
@@ -46,6 +47,9 @@
 
 /* BODY */
 div#root {
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - var(--header-height));
 	margin-bottom: var(--header-height);
 
 	background-color: var(--base);
@@ -54,8 +58,16 @@ div#root {
 
 @media screen and (min-width: 64em) {
 	div#root {
+		min-height: 100vh;
 		margin: 0;
 	}
+}
+
+/* ----------------------------------------------------------------- */
+
+/* MAIN */
+main {
+	flex: 1;
 }
 
 /* ----------------------------------------------------------------- */
@@ -300,6 +312,7 @@ section article {
 
 /* HEADINGS */
 h1 {
+	margin: 0;
 	/* margin: 1rem; */
 
 	/* font-weight: 600; */
