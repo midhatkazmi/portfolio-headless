@@ -28,7 +28,7 @@ const Posts = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<title>Work | Portfolio Headless</title>
+					<title>Work | Midhat Kazmi</title>
 					<section className="posts">
 						<h1>My Work</h1>
 						{restData.map((post) => (

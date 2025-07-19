@@ -31,9 +31,8 @@ const Contact = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<title>{`${restData.title.rendered} | Portfolio Headless`}</title>
+					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
 					<article id={`post-${restData.id}`} className="contact">
-						{/* <h1>{restData.title.rendered}</h1> */}
 						<div
 							className="entry-content"
 							dangerouslySetInnerHTML={{

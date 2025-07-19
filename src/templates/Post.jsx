@@ -28,7 +28,7 @@ const Post = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<title>{`${restData.title.rendered} | Portfolio Headless`}</title>
+					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
 					<article id={`post-${restData.id}`}>
 						<h1>{restData.title.rendered}</h1>
 						{restData.featured_media !== 0 &&
