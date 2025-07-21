@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
+import "./Home.css";
 
 const Home = () => {
 	const restPath = restBase + "pages/9";
@@ -25,13 +26,14 @@ const Home = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<title>Midhat Kazmi | Front-End Web Developer</title>
-					<div
-						className="home"
-						dangerouslySetInnerHTML={{
-							__html: restData.content.rendered,
-						}}
-					></div>
+					<main className="home">
+						<title>Midhat Kazmi | Front-End Web Developer</title>
+						<div
+							dangerouslySetInnerHTML={{
+								__html: restData.content.rendered,
+							}}
+						></div>
+					</main>
 				</>
 			) : (
 				<Loading />

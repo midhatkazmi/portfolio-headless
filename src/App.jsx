@@ -13,7 +13,6 @@ function App() {
 		<>
 			<ScrollToTop />
 			<Header />
-			{/* <main> */}
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="/contact" element={<Contact />} />
@@ -21,7 +20,6 @@ function App() {
 				<Route path="/work" element={<Posts />} />
 				<Route path="/work/:slug" element={<Post />} />
 			</Routes>
-			{/* </main> */}
 			<Footer />
 		</>
 	);

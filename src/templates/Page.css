@@ -1,15 +1,15 @@
-section.about article {
+main.about article {
 	margin-top: 2rem;
 }
 
-section.about ul {
+main.about ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin: 1rem;
 }
 
-section.about li {
+main.about li {
 	display: block;
 	padding: 0.5rem;
 
@@ -20,11 +20,11 @@ section.about li {
 	font-weight: 500;
 }
 
-div#root.dark section.about li {
+div#root.dark main.about li {
 	border-color: var(--base2);
 }
 
-section.about img {
+main.about img {
 	margin-top: 2rem;
 	aspect-ratio: 1 / 1;
 	object-fit: cover;
@@ -34,13 +34,13 @@ section.about img {
 }
 
 @media screen and (min-width: 64em) {
-	section.about div.wp-block-group {
+	main.about div.wp-block-group {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 	}
 
-	section.about div.wp-block-group article {
+	main.about div.wp-block-group article {
 		order: 1;
 	}
 }

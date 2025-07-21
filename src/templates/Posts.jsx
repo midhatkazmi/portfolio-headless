@@ -28,46 +28,45 @@ const Posts = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<title>Work | Midhat Kazmi</title>
-					<section className="posts">
-						<h1>My Work</h1>
-						{/* have button selector here like movie that changes what posts are being mapped */}
-						{restData.map((post) => (
-							<article key={post.id} id={`post-${post.id}`}>
-								{post.featured_media !== 0 &&
-									post._embedded && (
-										<FeaturedImage
-											featuredImageObject={
-												post._embedded[
-													"wp:featuredmedia"
-												][0]
-											}
-										/>
-									)}
-								<div>
-									{/* <Link to={`/work/${post.slug}`}> */}
-									<h2>{post.title.rendered}</h2>
-									{/* </Link> */}
-									<div
-										className="entry-content"
-										dangerouslySetInnerHTML={{
-											__html: post.excerpt.rendered,
-										}}
-									></div>
-									<div>{post.slug}</div>
-									{/* {post.acf.featured_work && <div>true</div>} */}
-									{/* <div>{post.acf.live_site_link}</div> */}
-									{/* <div>{post.acf.github_repo_link}</div> */}
-									{/* <div>{post.acf.prototype_link}</div> */}
-									{/* check if tools is TRUE, then loop through */}
-									{/* <div>{post.acf.tools.name}</div> */}
-									{/* {post.acf.tools.length > 0 && */}
-									{/* // console.log(post.acf.tools[0][0].name)} */}
-									{/* post.acf.tools[0].name} */}
-								</div>
-							</article>
-						))}
-					</section>
+					<main className="work">
+						<title>Work | Midhat Kazmi</title>
+						<section>
+							<h1>My Work</h1>
+							{/* have button selector here like movie that changes what posts are being mapped */}
+							{restData.map((post) => (
+								<article key={post.id}>
+									{post.featured_media !== 0 &&
+										post._embedded && (
+											<FeaturedImage
+												featuredImageObject={
+													post._embedded[
+														"wp:featuredmedia"
+													][0]
+												}
+											/>
+										)}
+									<div>
+										<h2>{post.title.rendered}</h2>
+										<Link to={`/work/${post.slug}`}>
+											View Project &rarr;
+										</Link>
+										<div
+											className="entry-content"
+											dangerouslySetInnerHTML={{
+												__html: post.excerpt.rendered,
+											}}
+										></div>
+										{/* {post.acf.featured_work && <div>true</div>} */}
+										{/* check if tools is TRUE, then loop through */}
+										{/* <div>{post.acf.tools.name}</div> */}
+										{/* {post.acf.tools.length > 0 && */}
+										{/* // console.log(post.acf.tools[0][0].name)} */}
+										{/* post.acf.tools[0].name} */}
+									</div>
+								</article>
+							))}
+						</section>
+					</main>
 				</>
 			) : (
 				<Loading />

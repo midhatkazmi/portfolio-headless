@@ -26,15 +26,17 @@ const Page = ({ pageID }) => {
 		<>
 			{isLoaded ? (
 				<>
-					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
-					<section className="about">
-						<div
-							className="content-width"
-							dangerouslySetInnerHTML={{
-								__html: restData.content.rendered,
-							}}
-						></div>
-					</section>
+					<main className="about">
+						<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
+						<section>
+							<div
+								className="content-width"
+								dangerouslySetInnerHTML={{
+									__html: restData.content.rendered,
+								}}
+							></div>
+						</section>
+					</main>
 				</>
 			) : (
 				<Loading />

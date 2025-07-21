@@ -1,73 +1,73 @@
 /* LANDING */
-section.landing {
+main.home section.landing {
 	min-height: calc(100vh - var(--header-height));
 }
 
 /* WORK */
-section#Work li {
-	display: block;
-	margin: 2rem 0 4rem 0;
+main.home section#Work li {
+	/* display: block; */
+	/* margin: 2rem 0 4rem 0; */
 }
 
-section#Work img {
-	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+main.home section#Work img {
+	/* box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); */
 }
 
-div.wp-block-post-terms {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	margin: 1rem;
+main.home div.wp-block-post-terms {
+	/* display: flex; */
+	/* flex-wrap: wrap; */
+	/* gap: 0.5rem; */
+	/* margin: 1rem; */
 }
 
-div.wp-block-post-terms a {
-	display: block;
-	padding: 0.5rem;
+main.home div.wp-block-post-terms a {
+	/* display: block; */
+	/* padding: 0.5rem; */
 
-	border: solid 0.0625rem var(--contrast);
-	border-radius: 0.25rem;
+	/* border: solid 0.0625rem var(--contrast); */
+	/* border-radius: 0.25rem; */
 
-	font-size: 0.75rem;
-	font-weight: 500;
+	/* font-size: 0.75rem; */
+	/* font-weight: 500; */
 }
 
-div.wp-block-post-terms span {
-	display: none;
+main.home div.wp-block-post-terms span {
+	/* display: none; */
 }
 
-a.wp-element-button {
-	display: block;
-	margin: 1rem;
-	padding: 1rem;
+main.home a.wp-element-button {
+	/* display: block; */
+	/* margin: 1rem; */
+	/* padding: 1rem; */
 
-	background-color: var(--contrast);
-	color: var(--base);
-	border-radius: 0.5rem;
+	/* background-color: var(--contrast); */
+	/* color: var(--base); */
+	/* border-radius: 0.5rem; */
 
-	text-align: center;
+	/* text-align: center; */
 }
 
-a.wp-element-button:hover,
-a.wp-element-button:focus,
-div#root.dark a.wp-element-button:hover,
-div#root.dark a.wp-element-button:focus {
-	background-color: var(--base);
-	color: var(--contrast);
-	box-shadow: 0 0 0 0.0625rem var(--contrast) inset;
+main.home a.wp-element-button:hover,
+main.home a.wp-element-button:focus,
+div#root.dark main.home a.wp-element-button:hover,
+div#root.dark main.home a.wp-element-button:focus {
+	/* background-color: var(--base); */
+	/* color: var(--contrast); */
+	/* box-shadow: 0 0 0 0.0625rem var(--contrast) inset; */
 }
 
-div#root.dark div.wp-block-post-terms a {
-	border-color: var(--base2);
+div#root.dark main.home div.wp-block-post-terms a {
+	/* border-color: var(--base2); */
 }
 
-div#root.dark a.wp-element-button {
-	background-color: var(--base2);
-	color: var(--contrast);
+div#root.dark main.home a.wp-element-button {
+	/* background-color: var(--base2); */
+	/* color: var(--contrast); */
 }
 
 @media screen and (min-width: 64em) {
-	section#Work ul {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+	main.home section#Work ul {
+		/* display: grid; */
+		/* grid-template-columns: repeat(3, 1fr); */
 	}
 }
