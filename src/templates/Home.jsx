@@ -25,17 +25,13 @@ const Home = () => {
 		<>
 			{isLoaded ? (
 				<>
-					{/* <title>{`${restData.title.rendered} | Mindset Headless`}</title> */}
 					<title>Midhat Kazmi | Front-End Web Developer</title>
-					<div id={`post-${restData.id}`}>
-						{/* <h1>{restData.title.rendered}</h1> */}
-						<div
-							className="entry-content"
-							dangerouslySetInnerHTML={{
-								__html: restData.content.rendered,
-							}}
-						></div>
-					</div>
+					<div
+						className="home"
+						dangerouslySetInnerHTML={{
+							__html: restData.content.rendered,
+						}}
+					></div>
 				</>
 			) : (
 				<Loading />
