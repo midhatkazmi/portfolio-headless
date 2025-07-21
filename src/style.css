@@ -32,6 +32,7 @@
 	/* --black: black; */
 	--gray1: hsl(0, 0%, 10%);
 	--gray2: hsl(0, 0%, 20%);
+	--gray3: hsl(0, 0%, 30%);
 	--gray: hsl(0, 0%, 50%);
 	--gray8: hsl(0, 0%, 80%);
 	--gray9: hsl(0, 0%, 90%);
@@ -283,5 +284,6 @@ div#root.dark * {
 
 	--base: var(--gray1);
 	--base2: var(--gray2);
+	--base3: var(--gray3);
 	--contrast: var(--gray9);
 }

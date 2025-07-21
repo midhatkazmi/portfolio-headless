@@ -2,35 +2,78 @@ main.contact li {
 	display: block;
 	margin: 1rem;
 
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.5rem;
+	overflow: hidden;
+
 	font-size: 0.75rem;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 5%;
 }
 
+div#root.dark main.contact li {
+	background-color: var(--base2);
+	border-color: var(--base2);
+}
+
+div#root.dark main.contact li:hover,
+div#root.dark main.contact li:focus {
+	border-color: var(--contrast);
+}
+
 main.contact li.email {
 	display: flex;
-
-	border: solid 0.0625rem var(--contrast);
-	border-radius: 0.5rem;
 }
 
-main.contact li a {
+main.contact li.email a {
 	display: flex;
 	align-items: center;
+	flex: 1;
 	gap: 1rem;
-	width: 100%;
 	padding: 1rem;
+
+	border-right: solid 0.0625rem var(--contrast);
 }
 
-main.contact a.link {
-	border: solid 0.0625rem var(--contrast);
-	border-radius: 0.5rem;
+div#root.dark main.contact li.email a:hover,
+div#root.dark main.contact li.email a:focus {
+	border-color: var(--contrast);
+}
+
+main.contact a:hover,
+main.contact a:focus {
+	background-color: var(--contrast);
+	color: var(--base);
+}
+
+div#root.dark main.contact a:hover,
+div#root.dark main.contact a:focus {
+	background-color: var(--base);
+	color: var(--contrast);
+}
+
+main.contact a:hover path,
+main.contact a:focus path {
+	fill: var(--base);
+}
+
+div#root.dark main.contact a:hover path,
+div#root.dark main.contact a:focus path {
+	fill: var(--contrast);
+}
+
+div#root.dark main.contact li.email a {
+	border-color: var(--base3);
 }
 
 main.contact svg {
 	width: auto;
 	height: 1rem;
+}
+
+main.contact path {
+	fill: var(--contrast);
 }
 
 main.contact button {
@@ -39,5 +82,44 @@ main.contact button {
 
 	background: none;
 	border: none;
-	border-left: solid 0.0625rem var(--contrast);
+}
+
+main.contact button:hover,
+main.contact button:focus {
+	background-color: var(--contrast);
+}
+
+div#root.dark main.contact button:hover,
+div#root.dark main.contact button:focus {
+	background-color: var(--base);
+	box-shadow: 0 0 0 0.0625rem var(--contrast);
+}
+
+main.contact button:hover path,
+main.contact button:focus path {
+	fill: var(--base);
+}
+
+div#root.dark main.contact button:hover path,
+div#root.dark main.contact button:focus path {
+	fill: var(--contrast);
+}
+
+main.contact a.link {
+	display: flex;
+	padding: 1rem;
+}
+
+main.contact a.link div {
+	display: flex;
+	align-items: center;
+	flex: 1;
+	gap: 1rem;
+}
+
+@media screen and (min-width: 64em) {
+	main.contact ul {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
