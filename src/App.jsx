@@ -13,15 +13,15 @@ function App() {
 		<>
 			<ScrollToTop />
 			<Header />
-			<main id="main">
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/about" element={<Page pageID="13" />} />
-					<Route path="/work" element={<Posts />} />
-					<Route path="/work/:slug" element={<Post />} />
-				</Routes>
-			</main>
+			{/* <main> */}
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/contact" element={<Contact />} />
+				<Route path="/about" element={<Page pageID="13" />} />
+				<Route path="/work" element={<Posts />} />
+				<Route path="/work/:slug" element={<Post />} />
+			</Routes>
+			{/* </main> */}
 			<Footer />
 		</>
 	);

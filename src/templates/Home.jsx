@@ -25,7 +25,7 @@ const Home = () => {
 		<>
 			{isLoaded ? (
 				<>
-					{/* <title>{`${restData.title.rendered} | Portfolio Headless`}</title> */}
+					{/* <title>{`${restData.title.rendered} | Mindset Headless`}</title> */}
 					<title>Midhat Kazmi | Front-End Web Developer</title>
 					<div id={`post-${restData.id}`}>
 						{/* <h1>{restData.title.rendered}</h1> */}

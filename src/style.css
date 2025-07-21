@@ -40,6 +40,7 @@
 	--base2: var(--gray8);
 	--contrast: var(--gray1);
 	--accent: royalblue;
+	--accent-tint: rgba(65, 105, 225, 0.1);
 
 	margin: 0;
 	padding: 0;
@@ -85,10 +86,6 @@ section {
 	padding: 1rem;
 }
 
-section + section {
-	border-top: dashed 0.0625rem var(--base2);
-}
-
 /* LANDING */
 section.landing {
 	min-height: calc(100vh - var(--header-height));
@@ -122,10 +119,6 @@ div.wp-block-post-terms a {
 	font-weight: 500;
 }
 
-div.wp-block-post-terms a:hover {
-	cursor: default;
-}
-
 div.wp-block-post-terms span {
 	display: none;
 }
@@ -146,7 +139,9 @@ a.wp-element-button:hover,
 a.wp-element-button:focus,
 div#root.dark a.wp-element-button:hover,
 div#root.dark a.wp-element-button:focus {
-	background-color: var(--accent);
+	background-color: var(--base);
+	color: var(--contrast);
+	box-shadow: 0 0 0 0.0625rem var(--contrast) inset;
 }
 
 div#root.dark div.wp-block-post-terms a {
@@ -168,10 +163,6 @@ div#root.dark a.wp-element-button {
 	section#Work ul {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-	}
-
-	section#Work li + li {
-		margin: 0;
 	}
 }
 
@@ -280,7 +271,7 @@ svg {
 
 path {
 	fill: currentColor;
-	/* fill-rule: evenodd; */
+	fill-rule: evenodd;
 }
 
 /* ----------------------------------------------------------------- */

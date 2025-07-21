@@ -31,6 +31,7 @@ const Posts = () => {
 					<title>Work | Midhat Kazmi</title>
 					<section className="posts">
 						<h1>My Work</h1>
+						{/* have button selector here like movie that changes what posts are being mapped */}
 						{restData.map((post) => (
 							<article key={post.id} id={`post-${post.id}`}>
 								{post.featured_media !== 0 &&
@@ -53,12 +54,17 @@ const Posts = () => {
 											__html: post.excerpt.rendered,
 										}}
 									></div>
+									<div>{post.slug}</div>
+									{/* {post.acf.featured_work && <div>true</div>} */}
+									{/* <div>{post.acf.live_site_link}</div> */}
+									{/* <div>{post.acf.github_repo_link}</div> */}
+									{/* <div>{post.acf.prototype_link}</div> */}
+									{/* check if tools is TRUE, then loop through */}
+									{/* <div>{post.acf.tools.name}</div> */}
+									{/* {post.acf.tools.length > 0 && */}
+									{/* // console.log(post.acf.tools[0][0].name)} */}
+									{/* post.acf.tools[0].name} */}
 								</div>
-								{/* <div
-									dangerouslySetInnerHTML={{
-										__html: post.acf.project_tools,
-									}}
-								></div> */}
 							</article>
 						))}
 					</section>
