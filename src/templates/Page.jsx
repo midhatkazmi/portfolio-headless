@@ -27,15 +27,14 @@ const Page = ({ pageID }) => {
 			{isLoaded ? (
 				<>
 					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
-					<article id={`post-${restData.id}`} className="page">
-						{/* <h1>{restData.title.rendered}</h1> */}
+					<section className="about">
 						<div
-							className="entry-content"
+							className="content-width"
 							dangerouslySetInnerHTML={{
 								__html: restData.content.rendered,
 							}}
 						></div>
-					</article>
+					</section>
 				</>
 			) : (
 				<Loading />

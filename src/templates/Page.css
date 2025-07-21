@@ -1,11 +1,15 @@
-article.page ul.wp-block-list {
+section.about article {
+	margin-top: 2rem;
+}
+
+section.about ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin: 1rem;
 }
 
-article.page ul.wp-block-list li {
+section.about li {
 	display: block;
 	padding: 0.5rem;
 
@@ -16,6 +20,27 @@ article.page ul.wp-block-list li {
 	font-weight: 500;
 }
 
-div#root.dark article.page ul.wp-block-list li {
+div#root.dark section.about li {
 	border-color: var(--base2);
+}
+
+section.about img {
+	margin-top: 2rem;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	object-position: center 25%;
+
+	border-radius: 1rem;
+}
+
+@media screen and (min-width: 64em) {
+	section.about div.wp-block-group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	section.about div.wp-block-group article {
+		order: 1;
+	}
 }
