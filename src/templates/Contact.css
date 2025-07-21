@@ -1,6 +1,11 @@
+main.contact ul {
+	display: grid;
+	margin: 2rem 1rem 1rem 1rem;
+	gap: 1rem;
+}
+
 main.contact li {
 	display: block;
-	margin: 1rem;
 
 	border: solid 0.0625rem var(--contrast);
 	border-radius: 0.5rem;
@@ -41,14 +46,14 @@ div#root.dark main.contact li.email a:focus {
 	border-color: var(--contrast);
 }
 
-main.contact a:hover,
-main.contact a:focus {
+main.contact li a:hover,
+main.contact li a:focus {
 	background-color: var(--contrast);
 	color: var(--base);
 }
 
-div#root.dark main.contact a:hover,
-div#root.dark main.contact a:focus {
+div#root.dark main.contact li a:hover,
+div#root.dark main.contact li a:focus {
 	background-color: var(--base);
 	color: var(--contrast);
 }
@@ -119,7 +124,6 @@ main.contact a.link div {
 
 @media screen and (min-width: 64em) {
 	main.contact ul {
-		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
 }

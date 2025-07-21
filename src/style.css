@@ -167,6 +167,16 @@ div#root.dark a.wp-element-button {
 	}
 }
 
+div.wide-width {
+	margin: auto;
+	max-width: 1024px;
+}
+
+div.content-width {
+	margin: auto;
+	max-width: 48rem;
+}
+
 /* ----------------------------------------------------------------- */
 
 /* HEADINGS */
