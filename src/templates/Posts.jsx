@@ -33,41 +33,46 @@ const Posts = () => {
 						<section>
 							<h1>My Work</h1>
 							{/* have button selector here like movie that changes what posts are being mapped */}
-							{restData.map(
-								(post) =>
-									post.categories == 25 && (
-										<article key={post.id}>
-											{post.featured_media !== 0 &&
-												post._embedded && (
-													<FeaturedImage
-														featuredImageObject={
-															post._embedded[
-																"wp:featuredmedia"
-															][0]
-														}
-													/>
-												)}
-											<div>
-												<h2>{post.title.rendered}</h2>
-												<div
-													dangerouslySetInnerHTML={{
-														__html: post.excerpt
-															.rendered,
-													}}
-												></div>
-												{/* {post.acf.featured_work && <div>true</div>} */}
-												{/* check if tools is TRUE, then loop through */}
-												{/* <div>{post.acf.tools.name}</div> */}
-												{/* {post.acf.tools.length > 0 && */}
-												{/* // console.log(post.acf.tools[0][0].name)} */}
-												{/* post.acf.tools[0].name} */}
-												<Link to={`/work/${post.slug}`}>
-													View Project &rarr;
-												</Link>
-											</div>
-										</article>
-									)
-							)}
+							{restData.map((post) => (
+								// 3 = dev | 4 = design | 23 = featured | 25 = ux
+								// post.categories.includes(4) &&
+								<article key={post.id}>
+									{post.featured_media !== 0 &&
+										post._embedded && (
+											<FeaturedImage
+												featuredImageObject={
+													post._embedded[
+														"wp:featuredmedia"
+													][0]
+												}
+											/>
+										)}
+									<div>
+										<h2>{post.title.rendered}</h2>
+										<div
+											dangerouslySetInnerHTML={{
+												__html: post.excerpt.rendered,
+											}}
+										></div>
+										{post.acf?.tools?.map(
+											(tool_name, i) => (
+												<div key={i}>
+													{tool_name.tool}
+												</div>
+											)
+										)}
+										{/* {post.acf.featured_work && <div>true</div>} */}
+										{/* check if tools is TRUE, then loop through */}
+										{/* <div>{post.acf.tools.name}</div> */}
+										{/* {post.acf.tools.length > 0 && */}
+										{/* // console.log(post.acf.tools[0][0].name)} */}
+										{/* post.acf.tools[0].name} */}
+										<Link to={`/work/${post.slug}`}>
+											View Project &rarr;
+										</Link>
+									</div>
+								</article>
+							))}
 						</section>
 					</main>
 				</>
