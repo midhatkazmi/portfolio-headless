@@ -1,0 +1,12 @@
+main.work article {
+	margin: 1rem;
+
+	background-color: var(--base2);
+}
+
+@media screen and (min-width: 64em) {
+	main.work article {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
