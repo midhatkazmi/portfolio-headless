@@ -24,6 +24,32 @@ const Posts = () => {
 		fetchData();
 	}, [restPath]);
 
+	const [showAll, setShowAll] = useState(true);
+	const [categoryNum, setCategoryNum] = useState(0);
+
+	function allBtn() {
+		setShowAll(true);
+	}
+
+	function devBtn() {
+		setShowAll(false);
+		setCategoryNum(3);
+	}
+
+	function uxBtn() {
+		setShowAll(false);
+		setCategoryNum(25);
+	}
+
+	function designBtn() {
+		setShowAll(false);
+		setCategoryNum(4);
+	}
+
+	const filteredPosts = showAll
+		? restData
+		: restData.filter((post) => post.categories.includes(categoryNum));
+
 	return (
 		<>
 			{isLoaded ? (
@@ -32,10 +58,23 @@ const Posts = () => {
 						<title>Work | Midhat Kazmi</title>
 						<section>
 							<h1>My Work</h1>
-							{/* have button selector here like movie that changes what posts are being mapped */}
-							{restData.map((post) => (
-								// 3 = dev | 4 = design | 23 = featured | 25 = ux
-								// post.categories.includes(4) &&
+							<div className="buttons">
+								<button type="button" onClick={allBtn}>
+									All
+								</button>
+								<button type="button" onClick={devBtn}>
+									Development
+								</button>
+								<button type="button" onClick={uxBtn}>
+									User Experience
+								</button>
+								<button type="button" onClick={designBtn}>
+									Design
+								</button>
+							</div>
+							{/* {restData.map((post) => ( */}
+							{filteredPosts.map((post) => (
+								// showAll === false && post.categories.includes(categoryNum) &&(
 								<article key={post.id}>
 									{post.featured_media !== 0 &&
 										post._embedded && (
@@ -61,12 +100,6 @@ const Posts = () => {
 												</div>
 											)
 										)}
-										{/* {post.acf.featured_work && <div>true</div>} */}
-										{/* check if tools is TRUE, then loop through */}
-										{/* <div>{post.acf.tools.name}</div> */}
-										{/* {post.acf.tools.length > 0 && */}
-										{/* // console.log(post.acf.tools[0][0].name)} */}
-										{/* post.acf.tools[0].name} */}
 										<Link to={`/work/${post.slug}`}>
 											View Project &rarr;
 										</Link>
