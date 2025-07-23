@@ -44,7 +44,6 @@ const Post = () => {
 							)}
 					</section> */}
 					<div
-						className="entry-content"
 						dangerouslySetInnerHTML={{
 							__html: restData.content.rendered,
 						}}

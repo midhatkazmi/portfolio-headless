@@ -10,6 +10,7 @@ main.project figcaption {
 	margin: 1rem 0;
 
 	font-style: italic;
+	text-align: center;
 	line-height: 1.5;
 }
 
@@ -18,8 +19,25 @@ main.project strong {
 }
 
 @media screen and (min-width: 64em) {
+	main.project > div {
+		max-width: 64rem;
+		margin: auto;
+	}
+
+	main.project section + section {
+		padding-top: 0;
+	}
+
+	main.project article + article {
+		margin-top: 4rem;
+	}
+
 	main.project div.col2 {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
+	}
+
+	main.project div.col2 article {
+		margin-top: 0;
 	}
 }
