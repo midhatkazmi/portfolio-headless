@@ -50,7 +50,7 @@
 	line-height: 1;
 
 	scroll-behavior: smooth;
-	/* transition: all 0.25s; */
+	transition: all 0.25s;
 }
 
 /* ----------------------------------------------------------------- */
@@ -85,6 +85,7 @@ main {
 /* SECTIONS */
 section {
 	padding: 1rem;
+	scroll-margin-top: var(--header-height);
 }
 
 @media screen and (min-width: 64em) {

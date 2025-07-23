@@ -1,0 +1,25 @@
+main.project article + article {
+	margin-top: 2rem;
+}
+
+main.project figure figure {
+	margin: 1rem 0;
+}
+
+main.project figcaption {
+	margin: 1rem 0;
+
+	font-style: italic;
+	line-height: 1.5;
+}
+
+main.project strong {
+	font-weight: 600;
+}
+
+@media screen and (min-width: 64em) {
+	main.project div.col2 {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}

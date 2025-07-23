@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
 import FeaturedImage from "../utilities/FeaturedImage";
+import "./Post.css";
 
 const Post = () => {
 	const { slug } = useParams();
@@ -27,9 +28,9 @@ const Post = () => {
 	return (
 		<>
 			{isLoaded ? (
-				<main>
+				<main className="project">
 					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
-					<section>
+					{/* <section>
 						<h1>{restData.title.rendered}</h1>
 						{restData.featured_media !== 0 &&
 							restData._embedded && (
@@ -41,13 +42,13 @@ const Post = () => {
 									}
 								/>
 							)}
-						<div
-							className="entry-content"
-							dangerouslySetInnerHTML={{
-								__html: restData.content.rendered,
-							}}
-						></div>
-					</section>
+					</section> */}
+					<div
+						className="entry-content"
+						dangerouslySetInnerHTML={{
+							__html: restData.content.rendered,
+						}}
+					></div>
 				</main>
 			) : (
 				<Loading />

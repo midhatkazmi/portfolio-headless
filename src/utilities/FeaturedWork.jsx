@@ -48,6 +48,7 @@ const FeaturedWork = ({ ids }) => {
 							)}
 							<h3>{post.title.rendered}</h3>
 							<div
+								className="excerpt"
 								dangerouslySetInnerHTML={{
 									__html: post.excerpt.rendered,
 								}}

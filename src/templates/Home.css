@@ -3,6 +3,11 @@ main.home section.landing {
 	min-height: calc(100vh - var(--header-height));
 }
 
+/* WORK */
+main.home div.excerpt p {
+	color: var(--gray);
+}
+
 @media screen and (min-width: 64em) {
 	main.home div.work {
 		display: grid;

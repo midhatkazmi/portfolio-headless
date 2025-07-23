@@ -25,15 +25,21 @@ main.work button {
 	white-space: nowrap;
 }
 
+div#root.dark main.work button {
+	color: var(--contrast);
+}
+
 main.work button.active {
 	background-color: var(--contrast);
 	color: var(--base);
 }
 
-main.work article {
-	margin: 1rem;
+div#root.dark main.work button.active {
+	color: var(--base);
+}
 
-	background-color: var(--base2);
+main.work article + article {
+	margin-top: 4rem;
 }
 
 main.work img {
