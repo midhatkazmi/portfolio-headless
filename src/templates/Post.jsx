@@ -48,16 +48,6 @@ const Post = () => {
 							}}
 						></div>
 					</section>
-					{/* <nav className="posts-navigation">
-						{restData?.previous_post?.slug && (
-							<Link
-								to={`/blog/${restData.previous_post["slug"]}`}
-								className="prev-post"
-							>
-								Previous: {restData.previous_post["title"]}
-							</Link>
-						)}
-					</nav> */}
 				</main>
 			) : (
 				<Loading />

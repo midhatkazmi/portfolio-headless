@@ -86,7 +86,12 @@ const Posts = () => {
 											/>
 										)}
 									<div>
-										<h2>{post.title.rendered}</h2>
+										{/* <h2>{post.title.rendered}</h2> */}
+										<h2
+											dangerouslySetInnerHTML={{
+												__html: post.title.rendered,
+											}}
+										></h2>
 										<div
 											dangerouslySetInnerHTML={{
 												__html: post.excerpt.rendered,

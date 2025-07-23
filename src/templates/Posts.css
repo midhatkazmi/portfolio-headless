@@ -1,3 +1,30 @@
+main.work div.buttons {
+	display: flex;
+	gap: 0.5rem;
+	position: relative;
+	left: -1rem;
+	width: 100vw;
+	margin: 1rem 0;
+	padding: 0 2rem;
+
+	overflow-x: auto;
+}
+
+main.work button {
+	display: block;
+	padding: 0.5rem;
+
+	background: none;
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+	white-space: nowrap;
+}
+
 main.work article {
 	margin: 1rem;
 
