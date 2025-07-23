@@ -25,7 +25,7 @@ const Posts = () => {
 	}, [restPath]);
 
 	const [showAll, setShowAll] = useState(true);
-	const [categoryNum, setCategoryNum] = useState(0);
+	const [categoryNum, setCategoryNum] = useState(null);
 
 	function allBtn() {
 		setShowAll(true);
@@ -46,9 +46,10 @@ const Posts = () => {
 		setCategoryNum(4);
 	}
 
-	const filteredPosts = showAll
-		? restData
-		: restData.filter((post) => post.categories.includes(categoryNum));
+	const filteredPosts =
+		showAll === true
+			? restData
+			: restData.filter((post) => post.categories.includes(categoryNum));
 
 	return (
 		<>
@@ -72,9 +73,7 @@ const Posts = () => {
 									Design
 								</button>
 							</div>
-							{/* {restData.map((post) => ( */}
 							{filteredPosts.map((post) => (
-								// showAll === false && post.categories.includes(categoryNum) &&(
 								<article key={post.id}>
 									{post.featured_media !== 0 &&
 										post._embedded && (

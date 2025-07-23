@@ -4,6 +4,10 @@ main.work article {
 	background-color: var(--base2);
 }
 
+main.work img {
+	width: 100%;
+}
+
 @media screen and (min-width: 64em) {
 	main.work article {
 		display: grid;
