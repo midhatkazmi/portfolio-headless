@@ -85,7 +85,6 @@ main {
 /* SECTIONS */
 section {
 	padding: 1rem;
-	scroll-margin-top: var(--header-height);
 }
 
 @media screen and (min-width: 64em) {
@@ -93,6 +92,8 @@ section {
 		max-width: 120rem;
 		margin: auto;
 		padding: 8rem;
+
+		scroll-margin-top: var(--header-height);
 	}
 }
 
@@ -130,6 +131,7 @@ h3 {
 
 	font-size: 1.25rem;
 	font-weight: 600;
+	line-height: 1.25;
 }
 
 @media screen and (min-width: 64em) {
