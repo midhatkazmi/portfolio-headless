@@ -2,6 +2,23 @@ main.project article + article {
 	margin-top: 2rem;
 }
 
+main.project ul {
+	margin: 1rem 1rem 1rem 2rem;
+}
+
+main.project li {
+	line-height: 1.5;
+}
+
+main.project img {
+	margin: auto;
+}
+
+main.project video {
+	display: block;
+	margin: auto;
+}
+
 main.project figure figure {
 	margin: 1rem 0;
 }
@@ -39,5 +56,9 @@ main.project strong {
 
 	main.project div.col2 article {
 		margin-top: 0;
+	}
+
+	main.project video {
+		max-width: 20rem;
 	}
 }

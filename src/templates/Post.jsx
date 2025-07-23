@@ -29,7 +29,11 @@ const Post = () => {
 		<>
 			{isLoaded ? (
 				<main className="project">
-					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
+					<title
+						dangerouslySetInnerHTML={{
+							__html: `${restData.title.rendered} | Midhat Kazmi`,
+						}}
+					></title>
 					{/* <section>
 						<h1>{restData.title.rendered}</h1>
 						{restData.featured_media !== 0 &&
