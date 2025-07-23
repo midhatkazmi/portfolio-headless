@@ -6,6 +6,8 @@ import FeaturedImage from "../utilities/FeaturedImage";
 import "./Posts.css";
 
 const Posts = () => {
+	// what if buttons change chained string?
+	// e.g. "posts?${category=categoryNum}&_embed"
 	const restPath = restBase + "posts?_embed";
 	const [restData, setData] = useState([]);
 	const [isLoaded, setLoadStatus] = useState(false);
@@ -29,6 +31,7 @@ const Posts = () => {
 
 	function allBtn() {
 		setShowAll(true);
+		setCategoryNum(null);
 	}
 
 	function devBtn() {
@@ -60,16 +63,38 @@ const Posts = () => {
 						<section>
 							<h1>My Work</h1>
 							<div className="buttons">
-								<button type="button" onClick={allBtn}>
+								<button
+									className={showAll === true ? "active" : ""}
+									type="button"
+									onClick={allBtn}
+								>
 									All
 								</button>
-								<button type="button" onClick={devBtn}>
+								<button
+									className={
+										categoryNum === 3 ? "active" : ""
+									}
+									type="button"
+									onClick={devBtn}
+								>
 									Development
 								</button>
-								<button type="button" onClick={uxBtn}>
+								<button
+									className={
+										categoryNum === 25 ? "active" : ""
+									}
+									type="button"
+									onClick={uxBtn}
+								>
 									User Experience
 								</button>
-								<button type="button" onClick={designBtn}>
+								<button
+									className={
+										categoryNum === 4 ? "active" : ""
+									}
+									type="button"
+									onClick={designBtn}
+								>
 									Design
 								</button>
 							</div>

@@ -25,6 +25,11 @@ main.work button {
 	white-space: nowrap;
 }
 
+main.work button.active {
+	background-color: var(--contrast);
+	color: var(--base);
+}
+
 main.work article {
 	margin: 1rem;
 
@@ -36,6 +41,13 @@ main.work img {
 }
 
 @media screen and (min-width: 64em) {
+	main.work div.buttons {
+		position: static;
+		width: auto;
+		margin: 1rem;
+		padding: 0;
+	}
+
 	main.work article {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
