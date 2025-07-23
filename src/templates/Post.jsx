@@ -27,9 +27,9 @@ const Post = () => {
 	return (
 		<>
 			{isLoaded ? (
-				<>
+				<main>
 					<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
-					<article id={`post-${restData.id}`}>
+					<section>
 						<h1>{restData.title.rendered}</h1>
 						{restData.featured_media !== 0 &&
 							restData._embedded && (
@@ -47,8 +47,8 @@ const Post = () => {
 								__html: restData.content.rendered,
 							}}
 						></div>
-					</article>
-					<nav className="posts-navigation">
+					</section>
+					{/* <nav className="posts-navigation">
 						{restData?.previous_post?.slug && (
 							<Link
 								to={`/blog/${restData.previous_post["slug"]}`}
@@ -57,8 +57,8 @@ const Post = () => {
 								Previous: {restData.previous_post["title"]}
 							</Link>
 						)}
-					</nav>
-				</>
+					</nav> */}
+				</main>
 			) : (
 				<Loading />
 			)}
