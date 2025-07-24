@@ -116,14 +116,16 @@ const Posts = () => {
 												__html: post.title.rendered,
 											}}
 										></h2>
-										{showAll === true && (
-											<div>{post.acf.categories}</div>
-										)}
 										<div
 											dangerouslySetInnerHTML={{
 												__html: post.excerpt.rendered,
 											}}
 										></div>
+										{showAll === true && (
+											<div className="category">
+												{post.acf.categories}
+											</div>
+										)}
 										<ul>
 											{post.acf?.tools?.map(
 												(tool_name, i) => (

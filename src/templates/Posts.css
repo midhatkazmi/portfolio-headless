@@ -49,12 +49,73 @@ div#root.dark main.work button.active {
 	color: var(--base);
 }
 
-main.work article + article {
-	margin-top: 4rem;
+main.work article {
+	margin: 2rem 1rem 1rem 1rem;
+
+	border-radius: 1rem;
+	box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+
+	overflow: hidden;
+}
+
+div#root.dark main.work article {
+	border: solid 0.0625rem var(--base2);
 }
 
 main.work img {
 	width: 100%;
+}
+
+main.work div.category {
+	width: max-content;
+	margin: 1rem;
+	padding: 0.5rem;
+
+	background-color: var(--base2);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+main.work ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem;
+}
+
+main.work li {
+	display: block;
+	padding: 0.5rem;
+
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+div#root.dark main.work li {
+	border-color: var(--base2);
+}
+
+main.work a {
+	display: block;
+	padding: 1rem;
+
+	border-top: solid 0.0625rem var(--base2);
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 5%;
+}
+
+main.work a:hover,
+main.work a:focus {
+	text-decoration: underline;
 }
 
 @media screen and (min-width: 64em) {
