@@ -35,6 +35,38 @@ main.project strong {
 	font-weight: 600;
 }
 
+main.project a.wp-element-button {
+	display: block;
+	max-width: max-content;
+	margin: 1rem auto;
+	padding: 1rem;
+
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.5rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+}
+
+div#root.dark main.project a.wp-element-button {
+	border-color: var(--base2);
+}
+
+main.project a.wp-element-button:hover,
+main.project a.wp-element-button:focus {
+	background-color: var(--contrast);
+	color: var(--base);
+}
+
+div#root.dark main.project a.wp-element-button:hover,
+div#root.dark main.project a.wp-element-button:focus {
+	background-color: var(--base);
+	color: var(--contrast);
+	border-color: var(--contrast);
+}
+
 @media screen and (min-width: 64em) {
 	main.project > div {
 		max-width: 64rem;
