@@ -111,30 +111,33 @@ const Posts = () => {
 											/>
 										)}
 									<div>
-										<h2
-											dangerouslySetInnerHTML={{
-												__html: post.title.rendered,
-											}}
-										></h2>
-										<div
-											dangerouslySetInnerHTML={{
-												__html: post.excerpt.rendered,
-											}}
-										></div>
-										{showAll === true && (
-											<div className="category">
-												{post.acf.categories}
-											</div>
-										)}
-										<ul>
-											{post.acf?.tools?.map(
-												(tool_name, i) => (
-													<li key={i}>
-														{tool_name.tool}
-													</li>
-												)
+										<div>
+											<h2
+												dangerouslySetInnerHTML={{
+													__html: post.title.rendered,
+												}}
+											></h2>
+											<div
+												dangerouslySetInnerHTML={{
+													__html: post.excerpt
+														.rendered,
+												}}
+											></div>
+											{showAll === true && (
+												<div className="category">
+													{post.acf.categories}
+												</div>
 											)}
-										</ul>
+											<ul>
+												{post.acf?.tools?.map(
+													(tool_name, i) => (
+														<li key={i}>
+															{tool_name.tool}
+														</li>
+													)
+												)}
+											</ul>
+										</div>
 										<Link to={`/work/${post.slug}`}>
 											View Project &rarr;
 										</Link>

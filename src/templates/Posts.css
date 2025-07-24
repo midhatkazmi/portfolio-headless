@@ -130,4 +130,13 @@ main.work a:focus {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
+
+	main.work article > div {
+		display: flex;
+		flex-direction: column;
+	}
+
+	main.work article > div > div {
+		flex: 1;
+	}
 }
