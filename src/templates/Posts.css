@@ -25,8 +25,19 @@ main.work button {
 	white-space: nowrap;
 }
 
+main.work button:hover,
+main.work button:focus {
+	background-color: var(--contrast);
+	color: var(--base);
+}
+
 div#root.dark main.work button {
 	color: var(--contrast);
+}
+
+div#root.dark main.work button:hover,
+div#root.dark main.work button:focus {
+	color: var(--base);
 }
 
 main.work button.active {
