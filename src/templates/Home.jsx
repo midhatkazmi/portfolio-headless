@@ -42,15 +42,13 @@ const Home = () => {
 									ids={restData.acf.featured_work}
 								/>
 							</div>
-							<div className="content-width">
-								<article className="cta">
-									<h3>
-										Want to see my User Experience &amp;
-										Graphic Design work?
-									</h3>
-									<Link to="/work">View All Work &rarr;</Link>
-								</article>
-							</div>
+							<article className="cta">
+								<h3>
+									Want to see my User Experience &amp; Graphic
+									Design work?
+								</h3>
+								<Link to="/work">View All Work</Link>
+							</article>
 						</section>
 					</main>
 				</>

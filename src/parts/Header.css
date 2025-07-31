@@ -1,21 +1,20 @@
-/* TABLE OF CONTENTS */
-/*
-- DARK THEME
-- DESKTOP
-*/
-
-header {
+/* header {
 	display: flex;
 	flex-direction: column-reverse;
 	position: fixed;
 	bottom: 0;
 	left: 0;
 	right: 0;
+	margin: 1rem;
 
 	background-color: var(--base);
+	border: solid 0.0625rem var(--base2);
+	border-radius: 1rem;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
 	font-weight: 500;
+
+	overflow: hidden;
 }
 
 header div.bar {
@@ -26,19 +25,14 @@ header div.bar {
 header a {
 	display: block;
 	padding: 1rem;
-}
+} */
 
-header a:hover,
-header a:focus {
-	text-decoration: underline;
-}
-
-header a.logotype {
+/* header a.logotype {
 	display: flex;
 	gap: 1rem;
-}
+} */
 
-header img {
+/* header img {
 	height: 1rem;
 }
 
@@ -71,7 +65,7 @@ header button:focus {
 
 header button:hover path,
 header button:focus path {
-	fill: var(--gray9);
+	fill: var(--white);
 }
 
 header nav {
@@ -94,17 +88,26 @@ header nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
 
+header nav a:hover,
+header nav a:focus {
+	background-color: var(--accent);
+} */
+
 div#root.dark header {
-	border-top: solid 0.0625rem var(--base2);
+	/* border-top: solid 0.0625rem var(--base2); */
 }
 
-@media screen and (min-width: 64em) {
+/* @media screen and (min-width: 64em) {
 	header {
 		position: sticky;
 		top: 0;
 		flex-direction: row;
 		justify-content: space-between;
+		margin: 0;
 		padding-right: 5.0625rem;
+
+		border: none;
+		border-radius: 0;
 	}
 
 	header a.logotype {
@@ -147,4 +150,4 @@ div#root.dark header {
 		border: none;
 		border-bottom: solid 0.0625rem var(--base2);
 	}
-}
+} */

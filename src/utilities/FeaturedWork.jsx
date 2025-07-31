@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Loading from "./Loading";
 import { restBase } from "./Utilities";
 import FeaturedImage from "./FeaturedImage";
+import laptopMockup from "./../assets/img/macbook-pro-14.png";
 
 const FeaturedWork = ({ ids }) => {
 	// Update the restPath to query the Work post type
@@ -39,23 +40,29 @@ const FeaturedWork = ({ ids }) => {
                 */}
 					{restData.map((post) => (
 						<article key={post.id}>
-							{post.featured_media !== 0 && post._embedded && (
+							{/* {post.featured_media !== 0 && post._embedded && (
 								<FeaturedImage
 									featuredImageObject={
 										post._embedded["wp:featuredmedia"][0]
 									}
 								/>
-							)}
+							)} */}
+							<figure>
+								<img src={laptopMockup} alt="" />
+							</figure>
 							<h3>{post.title.rendered}</h3>
-							<div
+							{/* <div
 								className="excerpt"
 								dangerouslySetInnerHTML={{
 									__html: post.excerpt.rendered,
 								}}
-							></div>
-							<Link to={`/work/${post.slug}`}>
-								View Project &rarr;
-							</Link>
+							></div> */}
+							<ul>
+								{post.acf?.tools?.map((tool_name, i) => (
+									<li key={i}>{tool_name.tool}</li>
+								))}
+							</ul>
+							<Link to={`/work/${post.slug}`}>View Project</Link>
 						</article>
 					))}
 				</>

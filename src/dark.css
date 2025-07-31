@@ -1,0 +1,13 @@
+.dark,
+.dark * {
+	--base: var(--gray1);
+	--base2: var(--gray2);
+	--base3: var(--gray3);
+	--contrast: var(--white);
+	--accent: mediumturquoise;
+	--accent-tint: rgba(72, 209, 204, 0.1);
+}
+
+.dark {
+	background-color: var(--base);
+}
