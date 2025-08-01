@@ -123,12 +123,13 @@ const Posts = () => {
 														.rendered,
 												}}
 											></div>
-											{showAll === true && (
-												<div className="category">
-													{post.acf.categories}
-												</div>
-											)}
+
 											<ul>
+												{showAll === true && (
+													<div className="category">
+														{post.acf.categories}
+													</div>
+												)}
 												{post.acf?.tools?.map(
 													(tool_name, i) => (
 														<li key={i}>
@@ -139,7 +140,7 @@ const Posts = () => {
 											</ul>
 										</div>
 										<Link to={`/work/${post.slug}`}>
-											View Project &rarr;
+											View Project
 										</Link>
 									</div>
 								</article>

@@ -11,3 +11,12 @@
 .dark {
 	background-color: var(--base);
 }
+
+.dark main.work button:not(.active) {
+	color: var(--contrast);
+}
+
+.dark main.work button:not(.active):hover,
+.dark main.work button:not(.active):focus {
+	border-color: var(--contrast);
+}

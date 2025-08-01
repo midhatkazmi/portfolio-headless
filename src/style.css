@@ -79,11 +79,8 @@ header {
 	border-radius: 0.5rem;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
-	/* font-size: 0.75rem; */
 	font-weight: 500;
 	text-align: center;
-	/* text-transform: uppercase; */
-	/* letter-spacing: 5%; */
 
 	overflow: hidden;
 }
@@ -106,7 +103,7 @@ header img {
 	height: 1rem;
 }
 
-.buttons {
+header .buttons {
 	display: flex;
 }
 
@@ -133,11 +130,11 @@ header button:focus path {
 	fill: var(--base);
 }
 
-nav.hidden {
+.hidden {
 	display: none;
 }
 
-nav.visible {
+.visible {
 	display: block;
 }
 
@@ -161,7 +158,8 @@ nav a:focus {
 footer {
 	padding: 1rem 1rem calc(var(--header-height) + 2rem) 1rem;
 
-	background-color: var(--gray2);
+	border-top: solid 0.0625rem var(--base2);
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) inset;
 }
 
 footer p {
@@ -184,6 +182,121 @@ main {
 	flex: 1;
 }
 
+/* WORK PAGE */
+main.work .buttons {
+	display: flex;
+	margin: 1rem 0;
+	padding: 0 1rem;
+
+	overflow-x: auto;
+}
+
+main.work button {
+	padding: 0.5rem;
+
+	border: solid 0.0625rem transparent;
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+	white-space: nowrap;
+}
+
+button.active {
+	background-color: var(--accent-tint);
+	color: var(--accent);
+
+	cursor: default;
+}
+
+main.work button:not(.active):hover,
+main.work button:not(.active):focus {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+main.work button:not(.active):active {
+	background-color: var(--accent);
+	color: var(--white);
+}
+
+main.work article {
+	display: flow-root;
+	margin: 1rem;
+
+	border: solid 0.0625rem var(--base2);
+	border-radius: 0.5rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+	overflow: hidden;
+}
+
+main.work h2 {
+	margin-bottom: 0.5rem;
+}
+
+main.work p {
+	margin: 0.5rem 1rem;
+}
+
+.category {
+	padding: 0.5rem;
+
+	background-color: var(--accent);
+	color: var(--base);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+main.work ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0.5rem 1rem 1rem 1rem;
+}
+
+main.work li {
+	display: block;
+	padding: 0.5rem;
+
+	background-color: var(--accent-tint);
+	color: var(--accent);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+main.work a {
+	display: block;
+	margin: 1rem;
+	padding: 1rem;
+
+	border: solid 0.0625rem var(--base2);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+}
+
+main.work a:hover,
+main.work a:focus {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+main.work a:active {
+	background-color: var(--accent);
+	color: var(--base);
+}
+
 /* ----------------------------------------------------------------- */
 
 /* SECTIONS */
@@ -193,6 +306,7 @@ section {
 
 /* HOMEPAGE LANDING	 */
 .landing {
+	height: 100vh;
 	padding: 1rem;
 }
 
@@ -212,11 +326,11 @@ div.work article {
 }
 
 div.work figure {
-	background-color: var(--accent);
+	/* background-color: var(--accent); */
 }
 
 div.work img {
-	padding: 2rem;
+	/* padding: 2rem; */
 }
 
 div.work h3 {
@@ -261,6 +375,11 @@ div.work a:hover,
 div.work a:focus {
 	color: var(--accent);
 	border-color: var(--accent);
+}
+
+div.work a:active {
+	background-color: var(--accent);
+	color: var(--base);
 }
 
 /* HOMEPAGE CTA */
