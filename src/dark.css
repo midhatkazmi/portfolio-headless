@@ -20,3 +20,8 @@
 .dark main.work button:not(.active):focus {
 	border-color: var(--contrast);
 }
+
+.dark main.work button:not(.active):active {
+	color: var(--base);
+	border-color: var(--accent);
+}

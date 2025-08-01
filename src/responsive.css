@@ -69,6 +69,27 @@
 
 	/* ----------------------------------------------------------------- */
 
+	/* MAIN */
+	main.work article {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+	}
+
+	main.work article + article {
+		margin-top: 2rem;
+	}
+
+	main.work article > div {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 1rem;
+	}
+
+	/* ----------------------------------------------------------------- */
+
 	/* SECTIONS */
 	section {
 		max-width: 120rem;

@@ -219,7 +219,7 @@ main.work button:not(.active):focus {
 
 main.work button:not(.active):active {
 	background-color: var(--accent);
-	color: var(--white);
+	color: var(--base);
 }
 
 main.work article {
