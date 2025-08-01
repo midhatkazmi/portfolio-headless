@@ -43,7 +43,7 @@ function Header() {
 				<div className="bar">
 					<Link className="logotype" to="/">
 						<img src={logo} alt="Midhat Kazmi Logo" />
-						{/* <div>Midhat Kazmi</div> */}
+						<div>Midhat Kazmi</div>
 					</Link>
 
 					<div className="buttons">

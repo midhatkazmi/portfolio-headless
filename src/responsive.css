@@ -1,4 +1,65 @@
 @media screen and (min-width: 64em) {
+	/* HEADER */
+	header {
+		position: sticky;
+		top: 0;
+		flex-direction: row;
+		justify-content: space-between;
+		margin: 0;
+		padding-right: 4.0625rem;
+
+		border: none;
+		border-bottom: solid 0.0625rem var(--base2);
+		border-radius: 0;
+	}
+
+	.logotype {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+
+	.logotype div {
+		display: block;
+	}
+
+	header img {
+		height: 2rem;
+	}
+
+	header button {
+		position: absolute;
+		right: 0;
+		padding: 1.5rem;
+	}
+
+	.nav {
+		display: none;
+	}
+
+	nav.hidden {
+		display: block;
+	}
+
+	nav ul {
+		display: flex;
+	}
+
+	nav a {
+		padding: 1.5rem 1rem;
+
+		border: none;
+	}
+
+	/* ----------------------------------------------------------------- */
+
+	/* FOOTER */
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+
 	/* ----------------------------------------------------------------- */
 
 	/* SECTIONS */
@@ -7,17 +68,35 @@
 		margin: auto;
 		padding: 8rem;
 
-		scroll-margin-top: var(--header-height);
+		/* scroll-margin-top: var(--header-height); */
+	}
+
+	/* HOMEPAGE LANDING */
+	.landing {
+		padding: 8rem;
 	}
 
 	/* HOMEPAGE WORK SECTION */
-	div.work {
+	.work {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	div.work article {
+	.work article {
 		box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+	}
+
+	.cta {
+		padding: 1rem;
+	}
+
+	.cta h3 {
+		font-size: 2rem;
+	}
+
+	.cta a {
+		width: max-content;
+		margin: 1rem auto;
 	}
 
 	/* ----------------------------------------------------------------- */
@@ -33,5 +112,12 @@
 
 	h3 {
 		font-size: 1.5rem;
+	}
+
+	/* ----------------------------------------------------------------- */
+
+	/* PARAGRAPHS */
+	p {
+		font-size: 1.25rem;
 	}
 }

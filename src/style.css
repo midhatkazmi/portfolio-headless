@@ -40,7 +40,6 @@
 		var(--accent-tint) 50%,
 		transparent 50%
 	);
-	--background: hwb(240 0% 75%);
 
 	margin: 0;
 	padding: 0;
@@ -80,13 +79,22 @@ header {
 	border-radius: 0.5rem;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
+	/* font-size: 0.75rem; */
 	font-weight: 500;
 	text-align: center;
+	/* text-transform: uppercase; */
+	/* letter-spacing: 5%; */
+
+	overflow: hidden;
 }
 
 .bar {
 	display: flex;
 	justify-content: space-between;
+}
+
+.logotype div {
+	display: none;
 }
 
 header a {
@@ -115,6 +123,16 @@ header svg {
 	fill: var(--contrast);
 }
 
+header button:hover,
+header button:focus {
+	background-color: var(--accent);
+}
+
+header button:hover path,
+header button:focus path {
+	fill: var(--base);
+}
+
 nav.hidden {
 	display: none;
 }
@@ -131,11 +149,10 @@ nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
 
-/* ----------------------------------------------------------------- */
-
-/* MAIN */
-main {
-	flex: 1;
+nav a:hover,
+nav a:focus {
+	background-color: var(--accent);
+	color: var(--base);
 }
 
 /* ----------------------------------------------------------------- */
@@ -162,7 +179,17 @@ small {
 
 /* ----------------------------------------------------------------- */
 
+/* MAIN */
+main {
+	flex: 1;
+}
+
+/* ----------------------------------------------------------------- */
+
 /* SECTIONS */
+section {
+	scroll-margin-top: 1rem;
+}
 
 /* HOMEPAGE LANDING	 */
 .landing {
@@ -217,15 +244,64 @@ div.work li {
 
 div.work a {
 	display: block;
+	margin: 1rem;
 	padding: 1rem;
 
-	border-top: solid 0.0625rem var(--base2);
+	border: solid 0.0625rem var(--base2);
+	border-radius: 0.25rem;
 
 	font-size: 0.75rem;
 	font-weight: 500;
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 5%;
+}
+
+div.work a:hover,
+div.work a:focus {
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+/* HOMEPAGE CTA */
+.cta {
+	display: flow-root;
+	margin: 1rem;
+
+	background-color: var(--accent-tint);
+	color: var(--accent);
+	border-radius: 0.5rem;
+
+	text-align: center;
+}
+
+.cta h3 {
+	margin: 1rem;
+
+	font-size: 1.5rem;
+}
+
+.cta a {
+	display: block;
+	margin: 1rem;
+	padding: 1rem;
+
+	background-color: var(--accent);
+	color: var(--base);
+	border: solid 0.0625rem var(--accent);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+}
+
+.cta a:hover,
+.cta a:focus {
+	background: none;
+	color: var(--accent);
+	border-color: var(--accent);
 }
 
 /* ----------------------------------------------------------------- */
@@ -290,16 +366,19 @@ a {
 	text-decoration: none;
 }
 
-a:visited {
-	color: currentColor;
-}
-
 /* ----------------------------------------------------------------- */
 
 /* HIGHLIGHTS */
 mark {
 	background: var(--accent-highlight);
 	color: var(--accent);
+}
+
+/* ----------------------------------------------------------------- */
+
+/* ABBREVIATIONS */
+abbr:focus::after {
+	content: " (" attr(title) ")";
 }
 
 /* ----------------------------------------------------------------- */
