@@ -332,6 +332,65 @@ main.about img {
 	object-position: center 25%;
 }
 
+/* CONTACT PAGE */
+main.contact p {
+	margin: 1rem;
+}
+
+main.contact ul {
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 5%;
+}
+
+main.contact li {
+	display: block;
+	margin: 1rem;
+
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.5rem;
+}
+
+main.contact ul a {
+	display: block;
+}
+
+main.contact svg {
+	width: auto;
+	height: 1rem;
+}
+
+main.contact .email {
+	display: flex;
+}
+
+main.contact .email a {
+	display: flex;
+	flex: 1;
+	align-items: center;
+	gap: 1rem;
+	padding: 1rem;
+}
+
+main.contact button {
+	padding: 1rem;
+
+	border-left: solid 0.0625rem var(--contrast);
+}
+
+main.contact .link {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+}
+
+main.contact .link div {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
 /* ----------------------------------------------------------------- */
 
 /* SECTIONS */
