@@ -350,15 +350,27 @@ main.contact li {
 
 	border: solid 0.0625rem var(--contrast);
 	border-radius: 0.5rem;
+
+	overflow: hidden;
 }
 
 main.contact ul a {
 	display: block;
 }
 
+main.contact ul a:hover,
+main.contact ul a:focus {
+	background-color: var(--contrast);
+	color: var(--base);
+}
+
 main.contact svg {
 	width: auto;
 	height: 1rem;
+}
+
+main.contact path {
+	fill: currentColor;
 }
 
 main.contact .email {
@@ -376,7 +388,18 @@ main.contact .email a {
 main.contact button {
 	padding: 1rem;
 
+	color: var(--contrast);
 	border-left: solid 0.0625rem var(--contrast);
+}
+
+main.contact button path {
+	fill: currentColor;
+}
+
+main.contact button:hover,
+main.contact button:focus {
+	background-color: var(--contrast);
+	color: var(--base);
 }
 
 main.contact .link {
