@@ -70,6 +70,8 @@
 	/* ----------------------------------------------------------------- */
 
 	/* MAIN */
+
+	/* WORK PAGE */
 	main.work article {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -86,6 +88,16 @@
 		flex-direction: column;
 		justify-content: space-between;
 		margin: 1rem;
+	}
+
+	/* ABOUT PAGE */
+	main.about div.wp-block-group {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	main.about div.wp-block-group article {
+		order: 1;
 	}
 
 	/* ----------------------------------------------------------------- */
@@ -155,5 +167,12 @@
 	/* PARAGRAPHS */
 	p {
 		font-size: 1.25rem;
+	}
+
+	/* ----------------------------------------------------------------- */
+
+	/* LOADING GIF */
+	.loading {
+		height: calc(100vh - var(--header-height));
 	}
 }

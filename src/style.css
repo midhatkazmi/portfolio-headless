@@ -297,6 +297,41 @@ main.work a:active {
 	color: var(--base);
 }
 
+/* ABOUT PAGE */
+main.about p {
+	margin: 1rem;
+}
+
+main.about ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 1rem;
+}
+
+main.about li {
+	display: block;
+	padding: 0.5rem;
+
+	border: solid 0.0625rem var(--contrast);
+	border-radius: 0.25rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+}
+
+main.about figure {
+	margin: 1rem;
+}
+
+main.about img {
+	border-radius: 0.5rem;
+
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	object-position: center 25%;
+}
+
 /* ----------------------------------------------------------------- */
 
 /* SECTIONS */
@@ -520,11 +555,11 @@ img {
 }
 
 /* LOADING GIF */
-/* .loading {
+.loading {
 	margin: auto;
-	height: calc(100vh - var(--header-height));
+	height: 100vh;
 	object-fit: scale-down;
-} */
+}
 
 /* ----------------------------------------------------------------- */
 
