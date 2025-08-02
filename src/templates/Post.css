@@ -1,4 +1,16 @@
-/* main.project article + article {
+main.project h3 {
+	margin: 1rem;
+}
+
+main.project p {
+	margin: 1rem;
+}
+
+main.project figure {
+	margin: 1rem;
+}
+
+main.project article + article {
 	margin-top: 2rem;
 }
 
@@ -93,4 +105,4 @@ div#root.dark main.project a.wp-element-button:focus {
 	main.project video {
 		max-width: 20rem;
 	}
-} */
+}
