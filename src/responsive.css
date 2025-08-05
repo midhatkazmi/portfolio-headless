@@ -72,18 +72,18 @@
 	/* MAIN */
 
 	/* WORK PAGE */
-	main.work article {
+	section.work article {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 
 		box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
 	}
 
-	main.work article + article {
+	section.work article + article {
 		margin-top: 2rem;
 	}
 
-	main.work article > div {
+	section.work article > div {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
