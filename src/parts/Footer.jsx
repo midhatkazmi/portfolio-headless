@@ -12,7 +12,17 @@ function Footer() {
 					</small>
 				</p>
 				<p>
-					<small>Powered by chai. &#9749;</small>
+					<small>
+						Designed +{" "}
+						<a
+							href="https://www.github.com/midhatkazmi/portfolio-headless"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							coded
+						</a>{" "}
+						with the help of chai. &#9749;
+					</small>
 				</p>
 			</footer>
 		</>

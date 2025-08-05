@@ -4,8 +4,8 @@ import App from "./App.jsx";
 // import "./index.css";
 import "./normalize-fwd.css";
 import "./style.css";
-import "./responsive.css";
 import "./dark.css";
+import "./responsive.css";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(

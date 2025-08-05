@@ -20,7 +20,7 @@
 
 /* VARIABLES */
 * {
-	--header-height: 3.125rem;
+	--header-height: 4.125rem;
 
 	--black: black;
 	--gray1: hsl(0, 0%, 10%);
@@ -36,7 +36,7 @@
 	--accent: teal;
 	--accent-tint: rgba(0, 128, 128, 0.1);
 	--accent-highlight: linear-gradient(
-		0deg,
+		0,
 		var(--accent-tint) 50%,
 		transparent 50%
 	);
@@ -73,6 +73,7 @@ header {
 	left: 0;
 	right: 0;
 	margin: 1rem;
+	padding: 0.5rem;
 
 	background-color: var(--base);
 	border: solid 0.0625rem var(--base2);
@@ -90,13 +91,27 @@ header {
 	justify-content: space-between;
 }
 
-.logotype div {
-	display: none;
-}
-
 header a {
 	display: block;
 	padding: 1rem;
+
+	border-radius: 0.25rem;
+}
+
+header a:hover,
+header a:focus {
+	background-color: var(--accent-tint);
+	color: var(--accent);
+	border-color: transparent;
+}
+
+header a:active {
+	background-color: var(--accent);
+	color: var(--base);
+}
+
+.logotype div {
+	display: none;
 }
 
 header img {
@@ -110,7 +125,7 @@ header .buttons {
 header button {
 	padding: 1rem;
 
-	border-left: solid 0.0625rem var(--base2);
+	border-radius: 0.25rem;
 }
 
 header svg {
@@ -122,11 +137,19 @@ header svg {
 
 header button:hover,
 header button:focus {
-	background-color: var(--accent);
+	background-color: var(--accent-tint);
 }
 
 header button:hover path,
 header button:focus path {
+	fill: var(--accent);
+}
+
+header button:active {
+	background-color: var(--accent);
+}
+
+header button:active path {
 	fill: var(--base);
 }
 
@@ -142,14 +165,10 @@ header li {
 	display: block;
 }
 
-nav a {
-	border-bottom: solid 0.0625rem var(--base2);
-}
+header nav a {
+	margin-bottom: 0.5rem;
 
-nav a:hover,
-nav a:focus {
-	background-color: var(--accent);
-	color: var(--base);
+	border: solid 0.0625rem var(--base2);
 }
 
 /* ----------------------------------------------------------------- */
@@ -158,7 +177,6 @@ nav a:focus {
 footer {
 	padding: 1rem 1rem calc(var(--header-height) + 2rem) 1rem;
 
-	border-top: solid 0.0625rem var(--base2);
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -183,7 +201,7 @@ main {
 }
 
 /* WORK PAGE */
-main.work .buttons {
+section.work .buttons {
 	display: flex;
 	margin: 1rem 0;
 	padding: 0 1rem;
@@ -191,7 +209,7 @@ main.work .buttons {
 	overflow-x: auto;
 }
 
-main.work button {
+section.work button {
 	padding: 0.5rem;
 
 	border: solid 0.0625rem transparent;
@@ -211,67 +229,68 @@ button.active {
 	cursor: default;
 }
 
-main.work button:not(.active):hover,
-main.work button:not(.active):focus {
+section.work button:not(.active):hover,
+section.work button:not(.active):focus {
 	color: var(--accent);
 	border-color: var(--accent);
 }
 
-main.work button:not(.active):active {
+section.work button:not(.active):active {
 	background-color: var(--accent);
 	color: var(--base);
 }
 
-main.work article {
-	display: flow-root;
-	margin: 1rem;
+section.work article {
+	/* display: flow-root; */
+	/* margin: 1rem; */
 
-	border: solid 0.0625rem var(--base2);
-	border-radius: 0.5rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	/* border: solid 0.0625rem var(--base2); */
+	/* border-radius: 0.5rem; */
+	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
 
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
-main.work h2 {
-	margin-bottom: 0.5rem;
+section.work h3 {
+	margin: 1rem 1rem 0.5rem 1rem;
 }
 
-main.work p {
+section.work p {
 	margin: 0.5rem 1rem;
 }
 
 .category {
 	padding: 0.5rem;
 
-	background-color: var(--accent);
-	color: var(--base);
+	background-color: var(--accent-tint);
+	color: var(--accent);
+	border: solid 0.0625rem transparent;
 	border-radius: 0.25rem;
 
 	font-size: 0.75rem;
 	font-weight: 500;
 }
 
-main.work ul {
+section.work ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
-	margin: 0.5rem 1rem 1rem 1rem;
+	margin: 1rem;
 }
 
-main.work li {
+section.work li {
 	display: block;
 	padding: 0.5rem;
 
-	background-color: var(--accent-tint);
 	color: var(--accent);
+	border: solid 0.0625rem var(--accent);
 	border-radius: 0.25rem;
 
 	font-size: 0.75rem;
 	font-weight: 500;
 }
 
-main.work a {
+section.work a {
 	display: block;
 	margin: 1rem;
 	padding: 1rem;
@@ -286,13 +305,13 @@ main.work a {
 	letter-spacing: 5%;
 }
 
-main.work a:hover,
-main.work a:focus {
+section.work a:hover,
+section.work a:focus {
 	color: var(--accent);
 	border-color: var(--accent);
 }
 
-main.work a:active {
+section.work a:active {
 	background-color: var(--accent);
 	color: var(--base);
 }
@@ -591,6 +610,10 @@ p a {
 p a:hover,
 p a:focus {
 	text-decoration: underline;
+}
+
+p a:active {
+	color: var(--accent);
 }
 
 /* ----------------------------------------------------------------- */
