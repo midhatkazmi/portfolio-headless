@@ -12,7 +12,20 @@
 	background-color: var(--base);
 }
 
-.dark main.work button:not(.active) {
+.dark section.work button:not(.active) {
+	color: var(--contrast);
+}
+
+.dark section.work button:not(.active):hover,
+.dark section.work button:not(.active):focus {
+	color: var(--accent);
+}
+
+.dark section.work button:not(.active):active {
+	color: var(--base);
+}
+
+/* .dark main.work button:not(.active) {
 	color: var(--contrast);
 }
 
@@ -24,4 +37,4 @@
 .dark main.work button:not(.active):active {
 	color: var(--base);
 	border-color: var(--accent);
-}
+} */

@@ -93,12 +93,13 @@ function Header() {
 					<ul>
 						<li>
 							<NavLink to="/" end>
-								Home
+								{/* Home */}
+								Work
 							</NavLink>
 						</li>
-						<li>
+						{/* <li>
 							<NavLink to="/work">Work</NavLink>
-						</li>
+						</li> */}
 						<li>
 							<NavLink to="/about">About</NavLink>
 						</li>

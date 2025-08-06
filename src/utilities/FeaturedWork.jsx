@@ -50,20 +50,24 @@ const FeaturedWork = ({ ids }) => {
 											}
 										/>
 									)}
-								<h3>{post.title.rendered}</h3>
-								{/* <div
-								className="excerpt"
-								dangerouslySetInnerHTML={{
-									__html: post.excerpt.rendered,
-								}}
-							></div> */}
 								<ul>
 									{post.acf?.tools?.map((tool_name, i) => (
 										<li key={i}>{tool_name.tool}</li>
 									))}
 								</ul>
+								<h3>{post.title.rendered}</h3>
+								<div
+									className="excerpt"
+									dangerouslySetInnerHTML={{
+										__html: post.excerpt.rendered,
+									}}
+								></div>
 							</div>
-							<Link to={`/work/${post.slug}`}>View Project</Link>
+							<p>
+								<Link to={`/work/${post.slug}`}>
+									Read More &rarr;
+								</Link>
+							</p>
 						</article>
 					))}
 				</>

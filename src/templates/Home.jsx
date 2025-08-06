@@ -36,24 +36,24 @@ const Home = () => {
 								__html: restData.content.rendered,
 							}}
 						></div>
-						{/* <section id="Work"> */}
-						{/* <h2>Featured Work</h2> */}
 						<Posts />
-						{/* <div className="work">
+						{/* <section id="Work">
+							<h2>Featured Work</h2>
+							<div className="work">
 								<FeaturedWork
 									ids={restData.acf.featured_work}
 								/>
-							</div> */}
-						{/* <div className="content-width"> */}
-						{/* <article className="cta">
-								<h3>
-									Want to see my User Experience &amp; Graphic
-									Design work?
-								</h3>
-								<Link to="/work">View All Work</Link>
-							</article> */}
-						{/* </div> */}
-						{/* </section> */}
+							</div>
+							<div className="content-width">
+								<article className="cta">
+									<h3>
+										Want to see my User Experience &amp;
+										Graphic Design work?
+									</h3>
+									<Link to="/work">View All Work</Link>
+								</article>
+							</div>
+						</section> */}
 					</main>
 				</>
 			) : (

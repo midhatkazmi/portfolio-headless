@@ -20,7 +20,7 @@
 
 /* VARIABLES */
 * {
-	--header-height: 4.125rem;
+	--header-height: 3.125rem;
 
 	--black: black;
 	--gray1: hsl(0, 0%, 10%);
@@ -73,7 +73,6 @@ header {
 	left: 0;
 	right: 0;
 	margin: 1rem;
-	padding: 0.5rem;
 
 	background-color: var(--base);
 	border: solid 0.0625rem var(--base2);
@@ -84,6 +83,7 @@ header {
 	text-align: center;
 
 	overflow: hidden;
+	z-index: 1;
 }
 
 .bar {
@@ -94,8 +94,6 @@ header {
 header a {
 	display: block;
 	padding: 1rem;
-
-	border-radius: 0.25rem;
 }
 
 header a:hover,
@@ -124,8 +122,6 @@ header .buttons {
 
 header button {
 	padding: 1rem;
-
-	border-radius: 0.25rem;
 }
 
 header svg {
@@ -166,9 +162,7 @@ header li {
 }
 
 header nav a {
-	margin-bottom: 0.5rem;
-
-	border: solid 0.0625rem var(--base2);
+	border-bottom: solid 0.0625rem var(--base2);
 }
 
 /* ----------------------------------------------------------------- */
@@ -177,6 +171,7 @@ header nav a {
 footer {
 	padding: 1rem 1rem calc(var(--header-height) + 2rem) 1rem;
 
+	border-top: solid 0.0625rem var(--base2);
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) inset;
 }
 
@@ -348,7 +343,8 @@ main.about li {
 	display: block;
 	padding: 0.5rem;
 
-	border: solid 0.0625rem var(--contrast);
+	background-color: var(--accent-tint);
+	color: var(--accent);
 	border-radius: 0.25rem;
 
 	font-size: 0.75rem;
@@ -373,29 +369,35 @@ main.contact p {
 }
 
 main.contact ul {
-	font-size: 0.75rem;
+	/* font-size: 0.75rem; */
 	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 5%;
+	/* text-transform: uppercase; */
+	/* letter-spacing: 5%; */
 }
 
 main.contact li {
 	display: block;
 	margin: 1rem;
-
-	border: solid 0.0625rem var(--contrast);
-	border-radius: 0.5rem;
-
-	overflow: hidden;
 }
 
 main.contact ul a {
 	display: block;
+	border: solid 0.0625rem var(--base2);
+	border-radius: 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
 }
 
 main.contact ul a:hover,
 main.contact ul a:focus {
-	background-color: var(--contrast);
+	color: var(--accent);
+	border-color: var(--accent);
+}
+
+main.contact ul a:active {
+	background-color: var(--accent);
 	color: var(--base);
 }
 
@@ -409,44 +411,64 @@ main.contact path {
 }
 
 main.contact .email {
-	display: flex;
+	/* display: flex; */
 }
 
 main.contact .email a {
-	display: flex;
-	flex: 1;
-	align-items: center;
-	gap: 1rem;
-	padding: 1rem;
+	/* display: flex; */
+	/* flex: 1; */
+	/* align-items: center; */
+	/* gap: 1rem; */
+	/* padding: 1rem; */
+}
+
+main.contact ul li {
+	position: relative;
+}
+
+main.contact .email a {
+	padding-right: 2rem;
 }
 
 main.contact button {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 0.0625rem;
 	padding: 1rem;
 
+	/* background-color: red; */
 	color: var(--contrast);
-	border-left: solid 0.0625rem var(--contrast);
+	/* border-left: solid 0.0625rem var(--contrast); */
 }
 
 main.contact button path {
-	fill: currentColor;
+	/* fill: currentColor; */
 }
 
 main.contact button:hover,
 main.contact button:focus {
-	background-color: var(--contrast);
+	background-color: var(--accent-tint);
+	color: var(--accent);
+	border-top-right-radius: 0.5rem;
+	border-bottom-right-radius: 0.5rem;
+}
+
+main.contact button:active {
+	background-color: var(--accent);
 	color: var(--base);
 }
 
 main.contact .link {
-	display: flex;
-	justify-content: space-between;
-	padding: 1rem;
+	/* display: flex; */
+	/* justify-content: space-between; */
+	/* padding: 1rem; */
 }
 
 main.contact .link div {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+	/* display: flex; */
+	/* align-items: center; */
+	/* gap: 1rem; */
 }
 
 /* ----------------------------------------------------------------- */
@@ -458,8 +480,14 @@ section {
 
 /* HOMEPAGE LANDING	 */
 .landing {
-	height: 100vh;
-	padding: 1rem;
+	display: flex;
+	align-items: center;
+	min-height: 100vh;
+	padding-bottom: calc(var(--header-height) + 2rem);
+}
+
+.landing h1 {
+	color: var(--contrast);
 }
 
 .landing p {
@@ -468,70 +496,86 @@ section {
 
 /* HOMEPAGE WORK SECTION */
 div.work article {
-	margin: 1rem;
+	/* margin: 1rem; */
 
-	border: solid 0.0625rem var(--base2);
-	border-radius: 0.5rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	/* border: solid 0.0625rem var(--base2); */
+	/* border-radius: 0.5rem; */
+	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
 
-	overflow: hidden;
+	/* overflow: hidden; */
+}
+
+div.work article + article {
+	margin-top: 4rem;
 }
 
 div.work figure {
-	/* background-color: var(--accent); */
+	margin: 1rem;
+	padding: 1rem;
+
+	background-color: var(--base2);
+	border-radius: 0.5rem;
 }
 
 div.work img {
-	/* padding: 2rem; */
+	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
 }
 
 div.work h3 {
 	margin: 1rem 1rem 0.5rem 1rem;
 }
 
+div.work p {
+	margin: 0.5rem 1rem;
+}
+
 div.work ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
-	margin: 0.5rem 1rem 1rem 1rem;
+	margin: 1rem;
 }
 
 div.work li {
 	display: block;
 	padding: 0.5rem;
 
-	background-color: var(--accent-tint);
 	color: var(--accent);
+	border: solid 0.0625rem var(--accent);
 	border-radius: 0.25rem;
 
 	font-size: 0.75rem;
 	font-weight: 500;
 }
 
+div.work div + p {
+	margin-bottom: 1rem;
+}
+
 div.work a {
-	display: block;
-	margin: 1rem;
-	padding: 1rem;
+	/* display: block; */
+	/* margin: 1rem; */
+	/* padding: 1rem; */
 
-	border: solid 0.0625rem var(--base2);
-	border-radius: 0.25rem;
+	/* border: solid 0.0625rem var(--base2); */
+	/* border-radius: 0.25rem; */
 
-	font-size: 0.75rem;
+	/* font-size: 0.75rem; */
 	font-weight: 500;
-	text-align: center;
-	text-transform: uppercase;
-	letter-spacing: 5%;
+	/* text-align: center; */
+	/* text-transform: uppercase; */
+	/* letter-spacing: 5%; */
 }
 
 div.work a:hover,
 div.work a:focus {
-	color: var(--accent);
-	border-color: var(--accent);
+	/* color: var(--accent); */
+	/* border-color: var(--accent); */
 }
 
 div.work a:active {
-	background-color: var(--accent);
-	color: var(--base);
+	/* background-color: var(--accent); */
+	/* color: var(--base); */
 }
 
 /* HOMEPAGE CTA */
@@ -593,6 +637,8 @@ div.work a:active {
 /* HEADINGS */
 h1 {
 	margin: 1rem;
+
+	color: var(--accent);
 
 	font-weight: 600;
 	line-height: 1.25;

@@ -71,23 +71,47 @@
 
 	/* MAIN */
 
+	/* HOME PAGE */
+	.landing {
+		align-items: unset;
+	}
+
 	/* WORK PAGE */
+	div.test {
+		/* display: grid; */
+		/* grid-template-columns: repeat(2, 1fr); */
+	}
+
 	section.work article {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 
-		box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1);
+		/* box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); */
 	}
 
 	section.work article + article {
+		/* margin-top: 2rem; */
+		margin: 0;
 		margin-top: 2rem;
+		/* margin-top: 1rem; */
+		/* padding-top: 1rem; */
+
+		/* border-top: solid 0.0625rem var(--base2); */
+	}
+
+	div.test article:nth-child(2n) figure {
+		/* order: 1; */
 	}
 
 	section.work article > div {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-		margin: 1rem;
+		/* display: flex; */
+		/* flex-direction: column; */
+		/* justify-content: space-between; */
+		/* margin: 1rem; */
+	}
+
+	div.test figure {
+		padding: 2rem;
 	}
 
 	/* ABOUT PAGE */
@@ -163,22 +187,22 @@
 
 	/* HEADINGS */
 	h1 {
-		font-size: 4rem;
+		/* font-size: 4rem; */
 	}
 
 	h2 {
-		font-size: 2rem;
+		/* font-size: 2rem; */
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		/* font-size: 1.5rem; */
 	}
 
 	/* ----------------------------------------------------------------- */
 
 	/* PARAGRAPHS */
 	p {
-		font-size: 1.25rem;
+		/* font-size: 1.25rem; */
 	}
 
 	/* ----------------------------------------------------------------- */
