@@ -213,4 +213,17 @@
 	.loading {
 		height: calc(100vh - var(--header-height));
 	}
+
+	/* ----------------------------------------------------------------- */
+
+	/* HOMEPAGE STACK SECTION */
+	.stack {
+		grid-template-columns: repeat(6, 6rem);
+		justify-content: center;
+		padding: 8rem;
+	}
+
+	.stack figure {
+		/* width: 6rem; */
+	}
 }

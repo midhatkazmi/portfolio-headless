@@ -80,7 +80,7 @@ const Home = () => {
 								<figcaption>
 									<abbr
 										tabIndex="0"
-										title="Syn&shy;tactically Awesome Styles Sheets"
+										title="Syn&shy;tactically Awesome/Sassy Cascading Styles Sheets"
 									>
 										SASS/SCSS
 									</abbr>
