@@ -13,7 +13,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		margin: 0;
-		padding-right: 4.0625rem;
+		padding-right: 4rem;
 
 		border: none;
 		border-bottom: solid 0.0625rem var(--base2);
@@ -140,7 +140,8 @@
 
 	/* SECTIONS */
 	section {
-		max-width: 120rem;
+		max-width: 90rem;
+		/* max-width: 120rem; */
 		margin: auto;
 		padding: 8rem;
 
@@ -149,6 +150,7 @@
 
 	/* HOMEPAGE LANDING */
 	.landing {
+		min-height: unset;
 		padding: 8rem;
 	}
 

@@ -77,7 +77,7 @@ header {
 	background-color: var(--base);
 	border: solid 0.0625rem var(--base2);
 	border-radius: 0.5rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
 
 	font-weight: 500;
 	text-align: center;
@@ -100,7 +100,6 @@ header a:hover,
 header a:focus {
 	background-color: var(--accent-tint);
 	color: var(--accent);
-	border-color: transparent;
 }
 
 header a:active {
@@ -122,6 +121,8 @@ header .buttons {
 
 header button {
 	padding: 1rem;
+
+	border-left: solid 0.0625rem var(--base2);
 }
 
 header svg {
@@ -160,7 +161,6 @@ header button:active path {
 header li {
 	display: block;
 }
-
 header nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
@@ -171,8 +171,9 @@ header nav a {
 footer {
 	padding: 1rem 1rem calc(var(--header-height) + 2rem) 1rem;
 
+	/* background-color: var(--gray2); */
 	border-top: solid 0.0625rem var(--base2);
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) inset;
+	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) inset; */
 }
 
 footer p {
@@ -202,6 +203,8 @@ section.work .buttons {
 	padding: 0 1rem;
 
 	overflow-x: auto;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 section.work button {
@@ -475,15 +478,14 @@ main.contact .link div {
 
 /* SECTIONS */
 section {
-	scroll-margin-top: 1rem;
+	padding: 1rem;
+	/* scroll-margin-top: 1rem; */
 }
 
 /* HOMEPAGE LANDING	 */
 .landing {
-	display: flex;
-	align-items: center;
-	min-height: 100vh;
-	padding-bottom: calc(var(--header-height) + 2rem);
+	/* min-height: 100vh; */
+	padding: 1rem;
 }
 
 .landing h1 {
@@ -737,4 +739,27 @@ svg {
 
 path {
 	fill-rule: evenodd;
+}
+
+/* ----------------------------------------------------------------- */
+
+/* HOMEPAGE STACK SECTION */
+.stack {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 2rem 1rem;
+	padding: 1rem 2rem;
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-align: center;
+}
+
+.stack img {
+	margin: auto auto 1rem auto;
+	width: 3rem;
+}
+
+.stack figcaption {
+	line-height: 1.5;
 }
