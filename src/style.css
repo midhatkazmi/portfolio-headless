@@ -25,7 +25,6 @@
 	--black: black;
 	--gray1: hsl(0, 0%, 10%);
 	--gray2: hsl(0, 0%, 20%);
-	--gray3: hsl(0, 0%, 30%);
 	--gray: hsl(0, 0%, 50%);
 	--gray8: hsl(0, 0%, 80%);
 	--gray9: hsl(0, 0%, 90%);
@@ -77,13 +76,11 @@ header {
 	background-color: var(--base);
 	border: solid 0.0625rem var(--base2);
 	border-radius: 0.5rem;
-	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1); */
 
 	font-weight: 500;
 	text-align: center;
 
 	overflow: hidden;
-	z-index: 1;
 }
 
 .bar {
@@ -161,6 +158,7 @@ header button:active path {
 header li {
 	display: block;
 }
+
 header nav a {
 	border-bottom: solid 0.0625rem var(--base2);
 }
@@ -171,9 +169,7 @@ header nav a {
 footer {
 	padding: 1rem 1rem calc(var(--header-height) + 2rem) 1rem;
 
-	/* background-color: var(--gray2); */
 	border-top: solid 0.0625rem var(--base2);
-	/* box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1) inset; */
 }
 
 footer p {
@@ -197,17 +193,20 @@ main {
 }
 
 /* WORK PAGE */
-section.work .buttons {
+main.work .buttons {
 	display: flex;
+	position: relative;
+	left: -1rem;
+	width: 100vw;
 	margin: 1rem 0;
-	padding: 0 1rem;
+	padding: 0 2rem;
 
 	overflow-x: auto;
 	-ms-overflow-style: none;
 	scrollbar-width: none;
 }
 
-section.work button {
+main.work button {
 	padding: 0.5rem;
 
 	border: solid 0.0625rem transparent;
@@ -227,18 +226,18 @@ button.active {
 	cursor: default;
 }
 
-section.work button:not(.active):hover,
-section.work button:not(.active):focus {
+main.work button:not(.active):hover,
+main.work button:not(.active):focus {
 	color: var(--accent);
 	border-color: var(--accent);
 }
 
-section.work button:not(.active):active {
+main.work button:not(.active):active {
 	background-color: var(--accent);
 	color: var(--base);
 }
 
-section.work article {
+main.work article {
 	/* display: flow-root; */
 	/* margin: 1rem; */
 
@@ -249,11 +248,11 @@ section.work article {
 	/* overflow: hidden; */
 }
 
-section.work article + article {
+main.work article + article {
 	margin-top: 4rem;
 }
 
-section.work figure {
+main.work figure {
 	margin: 1rem;
 	padding: 1rem;
 
@@ -261,15 +260,15 @@ section.work figure {
 	border-radius: 0.5rem;
 }
 
-section.work h3 {
+main.work h3 {
 	margin: 1rem 1rem 0.5rem 1rem;
 }
 
-section.work p {
+main.work p {
 	margin: 0.5rem 1rem;
 }
 
-section.work div + p {
+main.work div + p {
 	margin-bottom: 1rem;
 }
 
@@ -285,14 +284,14 @@ section.work div + p {
 	font-weight: 500;
 }
 
-section.work ul {
+main.work ul {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.5rem;
 	margin: 1rem;
 }
 
-section.work li {
+main.work li {
 	display: block;
 	padding: 0.5rem;
 
@@ -304,7 +303,7 @@ section.work li {
 	font-weight: 500;
 }
 
-section.work a {
+main.work a {
 	/* display: block; */
 	/* margin: 1rem; */
 	/* padding: 1rem; */
@@ -319,13 +318,13 @@ section.work a {
 	/* letter-spacing: 5%; */
 }
 
-section.work a:hover,
-section.work a:focus {
+main.work a:hover,
+main.work a:focus {
 	/* color: var(--accent); */
 	/* border-color: var(--accent); */
 }
 
-section.work a:active {
+main.work a:active {
 	/* background-color: var(--accent); */
 	/* color: var(--base); */
 }
@@ -484,12 +483,8 @@ section {
 
 /* HOMEPAGE LANDING	 */
 .landing {
-	/* min-height: 100vh; */
+	min-height: 100vh;
 	padding: 1rem;
-}
-
-.landing h1 {
-	color: var(--contrast);
 }
 
 .landing p {
@@ -747,16 +742,35 @@ path {
 .stack {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem 1rem;
-	padding: 1rem 2rem;
+	gap: 1rem;
+	margin: 1rem;
 
 	font-size: 0.75rem;
 	font-weight: 500;
 	text-align: center;
 }
 
+.landing article {
+	margin-top: 2rem;
+}
+
+.landing h3 {
+	width: max-content;
+	margin: 1rem auto;
+	padding: 0.5rem;
+
+	background-color: var(--accent-tint);
+	color: var(--accent);
+
+	font-size: 0.75rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1;
+	letter-spacing: 5%;
+}
+
 .stack img {
-	margin: auto auto 1rem auto;
+	margin: 1rem auto;
 	width: 3rem;
 }
 

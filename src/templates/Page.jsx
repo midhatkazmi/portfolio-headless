@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
-import "./Page.css";
 
 const Page = ({ pageID }) => {
 	const restPath = restBase + `pages/${pageID}`;
@@ -30,7 +29,6 @@ const Page = ({ pageID }) => {
 						<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
 						<section>
 							<div
-								className="content-width"
 								dangerouslySetInnerHTML={{
 									__html: restData.content.rendered,
 								}}

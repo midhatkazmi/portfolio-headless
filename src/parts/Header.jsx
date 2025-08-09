@@ -1,6 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "./Header.css";
 import logo from "./../assets/img/logo.svg";
 
 function Header() {
@@ -93,13 +92,12 @@ function Header() {
 					<ul>
 						<li>
 							<NavLink to="/" end>
-								{/* Home */}
-								Work
+								Home
 							</NavLink>
 						</li>
-						{/* <li>
+						<li>
 							<NavLink to="/work">Work</NavLink>
-						</li> */}
+						</li>
 						<li>
 							<NavLink to="/about">About</NavLink>
 						</li>

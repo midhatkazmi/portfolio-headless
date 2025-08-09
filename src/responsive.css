@@ -1,43 +1,28 @@
 @media screen and (min-width: 64em) {
-	* {
-		/* VARIABLES */
-		--header-height: 4.0625rem;
-	}
-
-	/* ----------------------------------------------------------------- */
-
 	/* HEADER */
 	header {
 		position: sticky;
-		top: 0;
+		top: 1rem;
+		width: max-content;
 		flex-direction: row;
-		justify-content: space-between;
-		margin: 0;
-		padding-right: 4rem;
-
-		border: none;
-		border-bottom: solid 0.0625rem var(--base2);
-		border-radius: 0;
+		margin: 1rem auto;
+		padding-right: 3.0625rem;
 	}
 
 	.logotype {
-		display: flex;
-		align-items: center;
-		gap: 1rem;
+		/* display: flex; */
+		/* gap: 1rem; */
+
+		border-right: solid 0.0625rem var(--base2);
 	}
 
 	.logotype div {
-		display: block;
-	}
-
-	header img {
-		height: 2rem;
+		/* display: block; */
 	}
 
 	header button {
 		position: absolute;
 		right: 0;
-		padding: 1.5rem;
 	}
 
 	.nav {
@@ -52,9 +37,7 @@
 		display: flex;
 	}
 
-	nav a {
-		padding: 1.5rem 1rem;
-
+	header nav a {
 		border: none;
 	}
 
@@ -64,7 +47,7 @@
 	footer {
 		display: flex;
 		justify-content: space-between;
-		padding: 1rem;
+		padding: 0;
 	}
 
 	/* ----------------------------------------------------------------- */
@@ -80,6 +63,10 @@
 	div.test {
 		/* display: grid; */
 		/* grid-template-columns: repeat(2, 1fr); */
+	}
+
+	section.work .buttons {
+		width: unset;
 	}
 
 	section.work article {
@@ -218,8 +205,9 @@
 
 	/* HOMEPAGE STACK SECTION */
 	.stack {
-		grid-template-columns: repeat(6, 6rem);
-		justify-content: center;
+		display: inline-grid;
+		grid-template-columns: repeat(9, 1fr);
+		/* justify-content: center; */
 		padding: 8rem;
 	}
 

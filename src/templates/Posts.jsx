@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
 import FeaturedImage from "../utilities/FeaturedImage";
-import "./Posts.css";
 
 const Posts = () => {
 	// what if buttons change chained string?
@@ -58,42 +57,46 @@ const Posts = () => {
 		<>
 			{isLoaded ? (
 				<>
-					{/* <main className="work"> */}
-					{/* <title>Work | Midhat Kazmi</title> */}
-					<section id="Work" className="work">
-						{/* <h1>My Work</h1> */}
-						<h2>Featured Work</h2>
-						<div className="buttons">
-							<button
-								className={showAll === true ? "active" : ""}
-								type="button"
-								onClick={allBtn}
-							>
-								All
-							</button>
-							<button
-								className={categoryNum === 3 ? "active" : ""}
-								type="button"
-								onClick={devBtn}
-							>
-								Development
-							</button>
-							<button
-								className={categoryNum === 25 ? "active" : ""}
-								type="button"
-								onClick={uxBtn}
-							>
-								User Experience
-							</button>
-							<button
-								className={categoryNum === 4 ? "active" : ""}
-								type="button"
-								onClick={designBtn}
-							>
-								Design
-							</button>
-						</div>
-						<div className="test">
+					<main className="work">
+						<title>Work | Midhat Kazmi</title>
+						<section>
+							<h1>My Work</h1>
+							<div className="buttons">
+								<button
+									className={showAll === true ? "active" : ""}
+									type="button"
+									onClick={allBtn}
+								>
+									All
+								</button>
+								<button
+									className={
+										categoryNum === 3 ? "active" : ""
+									}
+									type="button"
+									onClick={devBtn}
+								>
+									Development
+								</button>
+								<button
+									className={
+										categoryNum === 25 ? "active" : ""
+									}
+									type="button"
+									onClick={uxBtn}
+								>
+									User Experience
+								</button>
+								<button
+									className={
+										categoryNum === 4 ? "active" : ""
+									}
+									type="button"
+									onClick={designBtn}
+								>
+									Design
+								</button>
+							</div>
 							{filteredPosts.map((post) => (
 								<article key={post.id}>
 									{post.featured_media !== 0 &&
@@ -107,13 +110,11 @@ const Posts = () => {
 											/>
 										)}
 									<div>
-										<div>
+										{showAll === true && (
 											<ul>
-												{showAll === true && (
-													<div className="category">
-														{post.acf.categories}
-													</div>
-												)}
+												<li className="category">
+													{post.acf.categories}
+												</li>
 												{post.acf?.tools?.map(
 													(tool_name, i) => (
 														<li key={i}>
@@ -122,32 +123,39 @@ const Posts = () => {
 													)
 												)}
 											</ul>
-											<h3
-												dangerouslySetInnerHTML={{
-													__html: post.title.rendered,
-												}}
-											></h3>
-											<div
-												dangerouslySetInnerHTML={{
-													__html: post.excerpt
-														.rendered,
-												}}
-											></div>
-											<p>
-												<Link to={`/work/${post.slug}`}>
-													Read More &rarr;
-												</Link>
-											</p>
-										</div>
-										{/* <Link to={`/work/${post.slug}`}>
-										View Project
-									</Link> */}
+										)}
+										{showAll === false &&
+											post.acf.tools !== null && (
+												<ul>
+													{post.acf?.tools?.map(
+														(tool_name, i) => (
+															<li key={i}>
+																{tool_name.tool}
+															</li>
+														)
+													)}
+												</ul>
+											)}
+										<h2
+											dangerouslySetInnerHTML={{
+												__html: post.title.rendered,
+											}}
+										></h2>
+										<div
+											dangerouslySetInnerHTML={{
+												__html: post.excerpt.rendered,
+											}}
+										></div>
+										<p>
+											<Link to={`/work/${post.slug}`}>
+												Read More &rarr;
+											</Link>
+										</p>
 									</div>
 								</article>
 							))}
-						</div>
-					</section>
-					{/* </main> */}
+						</section>
+					</main>
 				</>
 			) : (
 				<Loading />

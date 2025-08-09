@@ -30,7 +30,7 @@ const FeaturedWork = ({ ids }) => {
 	return (
 		<>
 			{isLoaded ? (
-				<>
+				<div className="work">
 					{/* 
                 Map through the restData which should contain your 4 Work posts.
                 Output the title and featured image of each post wrapped in an article tag.
@@ -39,30 +39,25 @@ const FeaturedWork = ({ ids }) => {
                 */}
 					{restData.map((post) => (
 						<article key={post.id}>
-							<div>
-								{post.featured_media !== 0 &&
-									post._embedded && (
-										<FeaturedImage
-											featuredImageObject={
-												post._embedded[
-													"wp:featuredmedia"
-												][0]
-											}
-										/>
-									)}
-								<ul>
+							{post.featured_media !== 0 && post._embedded && (
+								<FeaturedImage
+									featuredImageObject={
+										post._embedded["wp:featuredmedia"][0]
+									}
+								/>
+							)}
+							{/* <ul>
 									{post.acf?.tools?.map((tool_name, i) => (
 										<li key={i}>{tool_name.tool}</li>
 									))}
-								</ul>
-								<h3>{post.title.rendered}</h3>
-								<div
-									className="excerpt"
-									dangerouslySetInnerHTML={{
-										__html: post.excerpt.rendered,
-									}}
-								></div>
-							</div>
+								</ul> */}
+							<h3>{post.title.rendered}</h3>
+							<div
+								className="excerpt"
+								dangerouslySetInnerHTML={{
+									__html: post.excerpt.rendered,
+								}}
+							></div>
 							<p>
 								<Link to={`/work/${post.slug}`}>
 									Read More &rarr;
@@ -70,7 +65,7 @@ const FeaturedWork = ({ ids }) => {
 							</p>
 						</article>
 					))}
-				</>
+				</div>
 			) : (
 				<Loading />
 			)}

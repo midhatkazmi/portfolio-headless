@@ -2,7 +2,6 @@
 .dark * {
 	--base: var(--gray1);
 	--base2: var(--gray2);
-	--base3: var(--gray3);
 	--contrast: var(--white);
 	--accent: mediumturquoise;
 	--accent-tint: rgba(72, 209, 204, 0.1);
@@ -12,29 +11,15 @@
 	background-color: var(--base);
 }
 
-.dark section.work button:not(.active) {
-	color: var(--contrast);
-}
-
-.dark section.work button:not(.active):hover,
-.dark section.work button:not(.active):focus {
-	color: var(--accent);
-}
-
-.dark section.work button:not(.active):active {
-	color: var(--base);
-}
-
-/* .dark main.work button:not(.active) {
+.dark main.work button:not(.active) {
 	color: var(--contrast);
 }
 
 .dark main.work button:not(.active):hover,
 .dark main.work button:not(.active):focus {
-	border-color: var(--contrast);
+	color: var(--accent);
 }
 
 .dark main.work button:not(.active):active {
 	color: var(--base);
-	border-color: var(--accent);
-} */
+}

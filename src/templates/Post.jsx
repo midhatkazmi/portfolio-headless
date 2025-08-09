@@ -34,19 +34,13 @@ const Post = () => {
 							__html: `${restData.title.rendered} | Midhat Kazmi`,
 						}}
 					></title>
-					{/* <section>
-						<h1>{restData.title.rendered}</h1>
-						{restData.featured_media !== 0 &&
-							restData._embedded && (
-								<FeaturedImage
-									featuredImageObject={
-										restData._embedded[
-											"wp:featuredmedia"
-										][0]
-									}
-								/>
-							)}
-					</section> */}
+					{/* {restData.featured_media !== 0 && restData._embedded && (
+						<FeaturedImage
+							featuredImageObject={
+								restData._embedded["wp:featuredmedia"][0]
+							}
+						/>
+					)} */}
 					<div
 						dangerouslySetInnerHTML={{
 							__html: restData.content.rendered,
