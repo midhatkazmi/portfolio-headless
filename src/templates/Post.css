@@ -31,10 +31,6 @@ main.project video {
 	margin: auto;
 }
 
-main.project figure figure {
-	margin: 1rem 0;
-}
-
 main.project figcaption {
 	margin: 1rem 0;
 
@@ -49,34 +45,28 @@ main.project strong {
 
 main.project a.wp-element-button {
 	display: block;
-	max-width: max-content;
-	margin: 1rem auto;
+	margin: 1rem;
 	padding: 1rem;
 
-	border: solid 0.0625rem var(--contrast);
+	border: solid 0.0625rem var(--base2);
 	border-radius: 0.5rem;
 
 	font-size: 0.75rem;
 	font-weight: 500;
+	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 5%;
 }
 
-div#root.dark main.project a.wp-element-button {
-	border-color: var(--base2);
-}
-
 main.project a.wp-element-button:hover,
 main.project a.wp-element-button:focus {
-	background-color: var(--contrast);
-	color: var(--base);
+	color: var(--accent);
+	border-color: var(--accent);
 }
 
-div#root.dark main.project a.wp-element-button:hover,
-div#root.dark main.project a.wp-element-button:focus {
-	background-color: var(--base);
-	color: var(--contrast);
-	border-color: var(--contrast);
+main.project a.wp-element-button:active {
+	background-color: var(--accent);
+	color: var(--base);
 }
 
 @media screen and (min-width: 64em) {
@@ -99,7 +89,7 @@ div#root.dark main.project a.wp-element-button:focus {
 	}
 
 	main.project div.col2 article {
-		margin-top: 0;
+		margin: 0;
 	}
 
 	main.project video {
