@@ -37,7 +37,9 @@ const Home = () => {
 						<section id="Work">
 							<h2>Featured Work</h2>
 							<FeaturedWork ids={restData.acf.featured_work} />
-							<Link to="/work">View All Work</Link>
+							<Link className="link-btn" to="/work">
+								View All Work
+							</Link>
 						</section>
 					</main>
 				</>

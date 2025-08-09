@@ -29,6 +29,7 @@ const Page = ({ pageID }) => {
 						<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
 						<section>
 							<div
+								className="content-width"
 								dangerouslySetInnerHTML={{
 									__html: restData.content.rendered,
 								}}

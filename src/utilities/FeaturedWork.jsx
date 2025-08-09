@@ -46,23 +46,29 @@ const FeaturedWork = ({ ids }) => {
 									}
 								/>
 							)}
-							{/* <ul>
-									{post.acf?.tools?.map((tool_name, i) => (
-										<li key={i}>{tool_name.tool}</li>
-									))}
-								</ul> */}
-							<h3>{post.title.rendered}</h3>
-							<div
-								className="excerpt"
-								dangerouslySetInnerHTML={{
-									__html: post.excerpt.rendered,
-								}}
-							></div>
-							<p>
-								<Link to={`/work/${post.slug}`}>
-									Read More &rarr;
-								</Link>
-							</p>
+							<div>
+								<ul>
+									<li className="category">
+										{post.acf.categories}
+									</li>
+									{post.acf.tools !== false &&
+										post.acf?.tools?.map((tool_name, i) => (
+											<li key={i}>{tool_name.tool}</li>
+										))}
+								</ul>
+								<h3>{post.title.rendered}</h3>
+								<div
+									className="excerpt"
+									dangerouslySetInnerHTML={{
+										__html: post.excerpt.rendered,
+									}}
+								></div>
+								<p>
+									<Link to={`/work/${post.slug}`}>
+										Read More &rarr;
+									</Link>
+								</p>
+							</div>
 						</article>
 					))}
 				</div>

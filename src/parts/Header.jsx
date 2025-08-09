@@ -40,9 +40,8 @@ function Header() {
 		<>
 			<header>
 				<div className="bar">
-					<Link className="logotype" to="/">
+					<Link className="logo" to="/">
 						<img src={logo} alt="Midhat Kazmi Logo" />
-						<div>Midhat Kazmi</div>
 					</Link>
 
 					<div className="buttons">

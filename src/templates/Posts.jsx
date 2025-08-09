@@ -97,36 +97,25 @@ const Posts = () => {
 									Design
 								</button>
 							</div>
-							{filteredPosts.map((post) => (
-								<article key={post.id}>
-									{post.featured_media !== 0 &&
-										post._embedded && (
-											<FeaturedImage
-												featuredImageObject={
-													post._embedded[
-														"wp:featuredmedia"
-													][0]
-												}
-											/>
-										)}
-									<div>
-										{showAll === true && (
-											<ul>
-												<li className="category">
-													{post.acf.categories}
-												</li>
-												{post.acf?.tools?.map(
-													(tool_name, i) => (
-														<li key={i}>
-															{tool_name.tool}
-														</li>
-													)
-												)}
-											</ul>
-										)}
-										{showAll === false &&
-											post.acf.tools !== null && (
+							<div className="projects">
+								{filteredPosts.map((post) => (
+									<article key={post.id}>
+										{post.featured_media !== 0 &&
+											post._embedded && (
+												<FeaturedImage
+													featuredImageObject={
+														post._embedded[
+															"wp:featuredmedia"
+														][0]
+													}
+												/>
+											)}
+										<div>
+											{showAll === true && (
 												<ul>
+													<li className="category">
+														{post.acf.categories}
+													</li>
 													{post.acf?.tools?.map(
 														(tool_name, i) => (
 															<li key={i}>
@@ -136,24 +125,40 @@ const Posts = () => {
 													)}
 												</ul>
 											)}
-										<h2
-											dangerouslySetInnerHTML={{
-												__html: post.title.rendered,
-											}}
-										></h2>
-										<div
-											dangerouslySetInnerHTML={{
-												__html: post.excerpt.rendered,
-											}}
-										></div>
-										<p>
-											<Link to={`/work/${post.slug}`}>
-												Read More &rarr;
-											</Link>
-										</p>
-									</div>
-								</article>
-							))}
+											{showAll === false &&
+												post.acf.tools !== null && (
+													<ul>
+														{post.acf?.tools?.map(
+															(tool_name, i) => (
+																<li key={i}>
+																	{
+																		tool_name.tool
+																	}
+																</li>
+															)
+														)}
+													</ul>
+												)}
+											<h2
+												dangerouslySetInnerHTML={{
+													__html: post.title.rendered,
+												}}
+											></h2>
+											<div
+												dangerouslySetInnerHTML={{
+													__html: post.excerpt
+														.rendered,
+												}}
+											></div>
+											<p>
+												<Link to={`/work/${post.slug}`}>
+													Read More &rarr;
+												</Link>
+											</p>
+										</div>
+									</article>
+								))}
+							</div>
 						</section>
 					</main>
 				</>
