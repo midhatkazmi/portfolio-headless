@@ -97,6 +97,11 @@
 		padding: 8rem;
 	}
 
+	/* HOMEPAGE LANDING SECTION */
+	.landing {
+		padding-bottom: 0;
+	}
+
 	/* HOMEPAGE WORK SECTION */
 	div.work article {
 		display: grid;
