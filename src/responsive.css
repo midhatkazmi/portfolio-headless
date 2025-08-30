@@ -102,12 +102,19 @@
 		padding-bottom: 0;
 	}
 
+	.landing h1 {
+		font-size: 4rem;
+	}
+
+	.landing h2 {
+		font-size: 2rem;
+	}
+
 	/* HOMEPAGE WORK SECTION */
 	div.work article {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
-
 	/* ----------------------------------------------------------------- */
 
 	/* LOADING GIF */
