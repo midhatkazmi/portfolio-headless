@@ -34,15 +34,22 @@ const Page = ({ pageID }) => {
 									__html: restData.content.rendered,
 								}}
 							></div>
-							{restData.acf.tool.map((toolIndex) => (
+							{restData.acf.tool.map((badge) => (
 								<figure
-									key={toolIndex.name}
+									className="badge"
+									key={badge.name}
 									style={{
-										backgroundColor:
-											toolIndex.background_color,
+										backgroundColor: badge.background_color,
+										color: badge.text_color,
 									}}
 								>
-									<figcaption>{toolIndex.name}</figcaption>
+									<div
+										style={{ fill: badge.text_color }}
+										dangerouslySetInnerHTML={{
+											__html: badge.logo,
+										}}
+									></div>
+									<figcaption>{badge.name}</figcaption>
 								</figure>
 							))}
 						</section>

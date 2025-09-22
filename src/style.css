@@ -602,3 +602,10 @@ svg {
 path {
 	fill-rule: evenodd;
 }
+
+/* ----------------------------------------------------------------- */
+
+/* BADGES */
+figure.badge {
+	padding: 1rem;
+}
