@@ -34,6 +34,17 @@ const Page = ({ pageID }) => {
 									__html: restData.content.rendered,
 								}}
 							></div>
+							{restData.acf.tool.map((toolIndex) => (
+								<figure
+									key={toolIndex.name}
+									style={{
+										backgroundColor:
+											toolIndex.background_color,
+									}}
+								>
+									<figcaption>{toolIndex.name}</figcaption>
+								</figure>
+							))}
 						</section>
 					</main>
 				</>
