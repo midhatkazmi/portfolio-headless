@@ -36,7 +36,7 @@ const Page = ({ pageID }) => {
 							></div>
 							<div className="content-width">
 								<div className="tools">
-									{/* {restData.acf.tool.map((badge) => (
+									{restData.acf.tool.map((badge) => (
 										<figure
 											className="tool"
 											key={badge.name}
@@ -55,7 +55,7 @@ const Page = ({ pageID }) => {
 												{badge.name}
 											</figcaption>
 										</figure>
-									))} */}
+									))}
 								</div>
 							</div>
 						</section>
