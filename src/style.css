@@ -301,22 +301,34 @@ section.contact li {
 	text-align: center;
 }
 
-section.contact ul a {
-	display: grid;
-	grid-template-columns: auto 1fr 1rem;
-	padding: 1rem;
-}
-
 section.contact li:hover,
 section.contact li:focus {
 	color: var(--accent);
-	box-shadow: 0 0 0 0.0625rem var(--accent);
+	box-shadow: 0 0 0 0.0625rem currentColor;
 	fill: currentColor;
 }
 
 section.contact li:active {
 	background-color: var(--accent);
 	color: var(--base);
+	fill: currentColor;
+}
+
+section.contact li:hover button,
+section.contact li:focus button {
+	border-color: var(--accent);
+	fill: var(--accent);
+}
+
+section.contact li:active button {
+	border-color: var(--base);
+	fill: var(--base);
+}
+
+section.contact ul a {
+	display: grid;
+	grid-template-columns: auto 1fr 1rem;
+	padding: 1rem;
 }
 
 section.contact svg {
@@ -336,7 +348,6 @@ section.contact button {
 section.contact button:hover,
 section.contact button:focus {
 	background-color: var(--accent-tint);
-	fill: var(--accent);
 }
 
 /* ----------------------------------------------------------------- */
