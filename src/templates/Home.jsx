@@ -3,6 +3,7 @@ import Loading from "../utilities/Loading";
 import { restBase } from "../utilities/Utilities";
 import FeaturedWork from "../utilities/FeaturedWork";
 import { Link } from "react-router-dom";
+import Contact from "./Contact";
 
 const Home = () => {
 	const restPath = restBase + "pages/9";
@@ -27,20 +28,24 @@ const Home = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<main className="home">
-						<title>Midhat Kazmi | Front-End Web Developer</title>
-						<div
+					<main>
+						<title>Midhat Kazmi | Designer + Developer</title>
+						<section
 							dangerouslySetInnerHTML={{
 								__html: restData.content.rendered,
 							}}
-						></div>
-						<section id="Work">
+						></section>
+						<section className="tools">
+							<h2 className="screen-reader-text">Tools I Use</h2>
+						</section>
+						{/* <section id="Work">
 							<h2>Featured Work</h2>
 							<FeaturedWork ids={restData.acf.featured_work} />
 							<Link className="link-btn" to="/work">
 								View All Work
 							</Link>
-						</section>
+						</section> */}
+						<Contact />
 					</main>
 				</>
 			) : (

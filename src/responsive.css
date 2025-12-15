@@ -22,7 +22,7 @@
 		display: none;
 	}
 
-	.hidden {
+	nav.collapsed {
 		display: block;
 	}
 
