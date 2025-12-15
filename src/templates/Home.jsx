@@ -4,6 +4,8 @@ import { restBase } from "../utilities/Utilities";
 import FeaturedWork from "../utilities/FeaturedWork";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
+import Page from "./Page";
+import Posts from "./Posts";
 
 const Home = () => {
 	const restPath = restBase + "pages/9";
@@ -37,6 +39,27 @@ const Home = () => {
 						></section>
 						<section className="tools">
 							<h2 className="screen-reader-text">Tools I Use</h2>
+							{restData.acf.logos.map((tool) => (
+								<figure key={tool.name}>
+									<div
+										dangerouslySetInnerHTML={{
+											__html: tool.logo,
+										}}
+									></div>
+									<figcaption>
+										{tool.abbreviation === "" ? (
+											tool.name
+										) : (
+											<abbr
+												tabIndex={0}
+												title={tool.abbreviation}
+											>
+												{tool.name}
+											</abbr>
+										)}
+									</figcaption>
+								</figure>
+							))}
 						</section>
 						{/* <section id="Work">
 							<h2>Featured Work</h2>
@@ -45,6 +68,8 @@ const Home = () => {
 								View All Work
 							</Link>
 						</section> */}
+						<Posts />
+						<Page pageID={13} />
 						<Contact />
 					</main>
 				</>

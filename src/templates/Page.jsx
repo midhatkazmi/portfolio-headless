@@ -25,41 +25,38 @@ const Page = ({ pageID }) => {
 		<>
 			{isLoaded ? (
 				<>
-					<main className="about">
-						<title>{`${restData.title.rendered} | Midhat Kazmi`}</title>
-						<section>
-							<div
-								className="content-width"
-								dangerouslySetInnerHTML={{
-									__html: restData.content.rendered,
-								}}
-							></div>
-							<div className="content-width">
-								<div className="tools">
-									{restData.acf.tool.map((badge) => (
-										<figure
-											className="tool"
-											key={badge.name}
-											style={{
-												backgroundColor:
-													badge.background_color,
-												color: badge.text_color,
+					{/* <main className="about"> */}
+					{/* <title>{`${restData.title.rendered} | Midhat Kazmi`}</title> */}
+					<section id="About" className="about">
+						<div
+							dangerouslySetInnerHTML={{
+								__html: restData.content.rendered,
+							}}
+						></div>
+						{/* <div className="content-width">
+							<div className="tools">
+								{restData.acf.tool.map((badge) => (
+									<figure
+										className="tool"
+										key={badge.name}
+										style={{
+											backgroundColor:
+												badge.background_color,
+											color: badge.text_color,
+										}}
+									>
+										<div
+											dangerouslySetInnerHTML={{
+												__html: badge.logo,
 											}}
-										>
-											<div
-												dangerouslySetInnerHTML={{
-													__html: badge.logo,
-												}}
-											></div>
-											<figcaption>
-												{badge.name}
-											</figcaption>
-										</figure>
-									))}
-								</div>
+										></div>
+										<figcaption>{badge.name}</figcaption>
+									</figure>
+								))}
 							</div>
-						</section>
-					</main>
+						</div> */}
+					</section>
+					{/* </main> */}
 				</>
 			) : (
 				<Loading />

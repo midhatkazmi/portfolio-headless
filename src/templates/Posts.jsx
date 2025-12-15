@@ -57,11 +57,12 @@ const Posts = () => {
 		<>
 			{isLoaded ? (
 				<>
-					<main className="work">
-						<title>Work | Midhat Kazmi</title>
-						<section>
-							<h1>My Work</h1>
-							<div className="buttons">
+					{/* <main className="work"> */}
+					{/* <title>Work | Midhat Kazmi</title> */}
+					<section id="Work" className="work">
+						{/* <h1>My Work</h1> */}
+						<h2 className="screen-reader-text">My Work</h2>
+						{/* <div className="buttons">
 								<button
 									className={showAll === true ? "active" : ""}
 									type="button"
@@ -96,26 +97,39 @@ const Posts = () => {
 								>
 									Design
 								</button>
-							</div>
-							<div className="projects">
-								{filteredPosts.map((post) => (
-									<article key={post.id}>
-										{post.featured_media !== 0 &&
-											post._embedded && (
-												<FeaturedImage
-													featuredImageObject={
-														post._embedded[
-															"wp:featuredmedia"
-														][0]
-													}
-												/>
-											)}
-										<div>
-											{showAll === true && (
+							</div> */}
+						{/* <div className="projects"> */}
+						{filteredPosts.map((post) => (
+							<Link to={`/work/${post.slug}`}>
+								<article key={post.id}>
+									{post.featured_media !== 0 &&
+										post._embedded && (
+											<FeaturedImage
+												featuredImageObject={
+													post._embedded[
+														"wp:featuredmedia"
+													][0]
+												}
+											/>
+										)}
+									{/* <div> */}
+									{/* {showAll === true && (
+											<ul>
+												<li className="category">
+													{post.acf.categories}
+												</li>
+												{post.acf?.tools?.map(
+													(tool_name, i) => (
+														<li key={i}>
+															{tool_name.tool}
+														</li>
+													)
+												)}
+											</ul>
+										)} */}
+									{/* {showAll === false &&
+											post.acf.tools !== null && (
 												<ul>
-													<li className="category">
-														{post.acf.categories}
-													</li>
 													{post.acf?.tools?.map(
 														(tool_name, i) => (
 															<li key={i}>
@@ -124,43 +138,28 @@ const Posts = () => {
 														)
 													)}
 												</ul>
-											)}
-											{showAll === false &&
-												post.acf.tools !== null && (
-													<ul>
-														{post.acf?.tools?.map(
-															(tool_name, i) => (
-																<li key={i}>
-																	{
-																		tool_name.tool
-																	}
-																</li>
-															)
-														)}
-													</ul>
-												)}
-											<h2
-												dangerouslySetInnerHTML={{
-													__html: post.title.rendered,
-												}}
-											></h2>
-											<div
-												dangerouslySetInnerHTML={{
-													__html: post.excerpt
-														.rendered,
-												}}
-											></div>
-											<p>
-												<Link to={`/work/${post.slug}`}>
-													Read More &rarr;
-												</Link>
-											</p>
-										</div>
-									</article>
-								))}
-							</div>
-						</section>
-					</main>
+											)} */}
+									<h3
+										dangerouslySetInnerHTML={{
+											__html: post.title.rendered,
+										}}
+									></h3>
+									<div
+										dangerouslySetInnerHTML={{
+											__html: post.excerpt.rendered,
+										}}
+									></div>
+									{/* <p> */}
+
+									{/* Read More &rarr; */}
+									{/* </p> */}
+									{/* </div> */}
+								</article>
+							</Link>
+						))}
+						{/* </div> */}
+					</section>
+					{/* </main> */}
 				</>
 			) : (
 				<Loading />

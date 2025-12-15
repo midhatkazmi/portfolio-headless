@@ -190,6 +190,8 @@ h2 {
 }
 
 h3 {
+	margin: 1rem;
+
 	font-size: 1.25rem;
 	font-weight: 600;
 	line-height: 1.25;
@@ -288,6 +290,115 @@ path {
 
 /* ----------------------------------------------------------------- */
 
+/* TOOLS */
+section.tools {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 2rem;
+	padding: 2rem;
+
+	background-color: var(--accent-tint);
+	color: var(--accent);
+
+	font-weight: 500;
+	text-align: center;
+}
+
+section.tools figcaption {
+	margin-top: 1rem;
+
+	line-height: 1.5;
+}
+
+section.tools svg {
+	width: 3rem;
+	margin: auto;
+}
+
+path.base,
+rect.base,
+circle.base,
+ellipse.base,
+polygon.base {
+	fill: var(--accent);
+}
+
+path.contrast,
+polygon.contrast {
+	fill: var(--base);
+}
+
+/* ----------------------------------------------------------------- */
+
+/* WORK */
+section.work a {
+	display: block;
+	margin: 1rem;
+
+	border-radius: 0.5rem;
+}
+
+section.work a + a {
+	margin-top: 4rem;
+}
+
+section.work h3 {
+	margin: 1rem 0 0 0;
+}
+
+section.work p {
+	margin: 0.5rem 0 0 0;
+}
+
+section.work a:hover,
+section.work a:focus {
+	color: var(--accent);
+	box-shadow: 0 0 0 0.0625rem currentColor;
+	overflow: hidden;
+}
+
+section.work a:hover h3,
+section.work a:focus h3 {
+	margin: 1rem 1rem 0 1rem;
+}
+
+section.work a:hover p,
+section.work a:focus p {
+	margin: 0.5rem 1rem 1rem 1rem;
+}
+
+section.work a:active {
+	background-color: var(--accent);
+	color: var(--base);
+	box-shadow: 0 0 0 0.0625rem var(--accent);
+}
+
+/* ----------------------------------------------------------------- */
+
+/* ABOUT */
+section.about {
+	background-color: var(--accent-tint);
+}
+
+section.about h2 {
+	color: var(--accent);
+}
+
+section.about figure {
+	margin: 1rem;
+}
+
+section.about img {
+	border-radius: 0.5rem;
+	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	object-position: center 25%;
+}
+
+/* ----------------------------------------------------------------- */
+
 /* CONTACT */
 section.contact li {
 	display: block;
@@ -321,7 +432,7 @@ section.contact li:focus button {
 }
 
 section.contact li:active button {
-	border-color: var(--base);
+	border-color: var(--base2);
 	fill: var(--base);
 }
 
