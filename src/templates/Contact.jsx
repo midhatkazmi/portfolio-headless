@@ -33,7 +33,7 @@ const Contact = () => {
 				<>
 					{/* <main className="contact"> */}
 					{/* <title>{`${restData.title.rendered} | Midhat Kazmi`}</title> */}
-					<section id="Contact" className="contact">
+					<section id="Contact" className="contact content-width">
 						<div
 							dangerouslySetInnerHTML={{
 								__html: restData.content.rendered,

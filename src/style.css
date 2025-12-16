@@ -102,6 +102,10 @@ header a:active {
 	fill: currentColor;
 }
 
+div.name {
+	display: none;
+}
+
 header div.buttons {
 	display: flex;
 }
@@ -357,11 +361,9 @@ section.work a:focus {
 	overflow: hidden;
 }
 
-section.work a:hover img,
-section.work a:focus img {
-	padding: 1rem;
-
-	background-color: var(--accent-tint);
+section.work a:hover figure,
+section.work a:focus figure {
+	margin: 1rem 1rem 0 1rem;
 }
 
 section.work a:hover h3,
@@ -383,19 +385,19 @@ section.work a:active {
 /* ----------------------------------------------------------------- */
 
 /* ABOUT */
-section.about {
+div.about {
 	background-color: var(--accent-tint);
 }
 
-section.about h2 {
+div.about h2 {
 	color: var(--accent);
 }
 
-section.about figure {
+div.about figure {
 	margin: 1rem;
 }
 
-section.about img {
+div.about img {
 	border-radius: 0.5rem;
 	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 
@@ -529,10 +531,10 @@ main.work button {
 }
 
 button.active {
-	background-color: var(--accent-tint);
-	color: var(--accent);
+	/* background-color: var(--accent-tint); */
+	/* color: var(--accent); */
 
-	cursor: default;
+	/* cursor: default; */
 }
 
 main.work button:not(.active):hover,
@@ -789,11 +791,11 @@ div.work a {
 
 /* WIDTHS */
 .wide-width {
-	margin: auto;
-	max-width: 64rem;
+	/* margin: auto; */
+	/* max-width: 64rem; */
 }
 
 .content-width {
-	margin: auto;
-	max-width: 48rem;
+	/* margin: auto; */
+	/* max-width: 48rem; */
 }

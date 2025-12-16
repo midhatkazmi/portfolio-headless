@@ -33,6 +33,7 @@ const Home = () => {
 					<main>
 						<title>Midhat Kazmi | Designer + Developer</title>
 						<section
+							className="content-width"
 							dangerouslySetInnerHTML={{
 								__html: restData.content.rendered,
 							}}

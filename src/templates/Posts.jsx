@@ -59,7 +59,7 @@ const Posts = () => {
 				<>
 					{/* <main className="work"> */}
 					{/* <title>Work | Midhat Kazmi</title> */}
-					<section id="Work" className="work">
+					<section id="Work" className="work wide-width">
 						{/* <h1>My Work</h1> */}
 						<h2 className="screen-reader-text">My Work</h2>
 						{/* <div className="buttons">

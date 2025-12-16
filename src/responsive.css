@@ -2,36 +2,38 @@
 	/* HEADER */
 	header {
 		position: sticky;
-		top: 1rem;
-		width: max-content;
-		flex-direction: row;
-		margin: 1rem auto;
-		padding-right: 3.0625rem;
+		top: 0;
+		margin: 0;
+
+		border-radius: 0;
 	}
 
-	.logo {
-		border-right: solid 0.0625rem var(--base2);
+	div.collapsed a {
+		display: flex;
+		gap: 1rem;
 	}
 
-	header button {
-		position: absolute;
-		right: 0;
-	}
-
-	.nav {
-		display: none;
-	}
-
-	nav.collapsed {
+	div.name {
 		display: block;
 	}
 
-	nav ul {
-		display: flex;
+	button.nav {
+		display: none;
+	}
+
+	header nav,
+	nav.collapsed {
+		display: block;
+		position: absolute;
+		right: 3.0625rem;
 	}
 
 	header nav a {
 		border: none;
+	}
+
+	header ul {
+		display: flex;
 	}
 
 	/* ----------------------------------------------------------------- */
@@ -45,80 +47,66 @@
 
 	/* ----------------------------------------------------------------- */
 
-	/* MAIN */
-
-	/* WORK PAGE */
-	main.work .buttons {
-		width: unset;
+	/* SECTIONS */
+	section {
+		margin: auto;
+		padding: 8rem;
+		scroll-margin-top: 3rem;
 	}
 
-	.projects {
+	/* ----------------------------------------------------------------- */
+
+	/* WIDTHS */
+	section.content-width {
+		max-width: 64rem;
+	}
+
+	section.wide-width {
+		max-width: 120rem;
+	}
+
+	/* ----------------------------------------------------------------- */
+
+	/* TOOLS */
+	section.tools {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 8rem;
+	}
+
+	/* ----------------------------------------------------------------- */
+
+	/* WORK */
+	section.work {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		gap: 2rem 0;
+		gap: 2rem;
 	}
 
-	main.work article + article {
-		margin: 0;
+	section.work a + a {
+		margin: 1rem;
 	}
 
-	main.work figure {
-		padding: 2rem;
-	}
+	/* ----------------------------------------------------------------- */
 
-	/* ABOUT PAGE */
-	main.about div.wp-block-group {
+	/* ABOUT */
+	div.col2 {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	main.about div.wp-block-group article {
-		order: 1;
-	}
+	/* ----------------------------------------------------------------- */
 
-	/* CONTACT PAGE */
-	main.contact ul {
+	/* CONTACT */
+	section.contact ul {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 1rem;
 		margin: 1rem;
 	}
 
-	main.contact li {
+	section.contact li {
 		margin: 0;
-	}
-
-	/* ----------------------------------------------------------------- */
-
-	/* SECTIONS */
-	section {
-		max-width: 90rem;
-		margin: auto;
-		padding: 8rem;
-	}
-
-	/* HOMEPAGE LANDING SECTION */
-	.landing {
-		padding-bottom: 0;
-	}
-
-	.landing h1 {
-		font-size: 4rem;
-	}
-
-	.landing h2 {
-		font-size: 2rem;
-	}
-
-	/* HOMEPAGE WORK SECTION */
-	div.work article {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-	}
-	/* ----------------------------------------------------------------- */
-
-	/* LOADING GIF */
-	.loading {
-		height: calc(100vh - var(--header-height) - 2rem);
 	}
 }
