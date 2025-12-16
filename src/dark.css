@@ -3,8 +3,10 @@ div.dark,
 div.dark * {
 	--gray1: hsl(0, 0%, 10%);
 	--gray2: hsl(0, 0%, 20%);
+	--gray3: hsl(0, 0%, 30%);
 	--base: var(--gray1);
 	--base2: var(--gray2);
+	--base3: var(--gray3);
 	--contrast: var(--white);
 }
 
@@ -20,13 +22,28 @@ div.dark header {
 	box-shadow: 0 0 1rem var(--black);
 }
 
-div.dark header a:active {
-	color: var(--contrast);
+div.dark header a {
 	fill: currentColor;
 }
 
-div.dark header button:active {
+div.dark header a:hover,
+div.dark header a:focus {
+	background-color: var(--base2);
+	color: var(--contrast);
+}
+
+div.dark header a:active {
+	background-color: var(--accent);
+}
+
+div.dark header button:hover,
+div.dark header button:focus {
+	background-color: var(--base2);
 	fill: var(--contrast);
+}
+
+div.dark header button:active {
+	background-color: var(--accent);
 }
 
 /* FOOTER */
@@ -34,9 +51,21 @@ div.dark footer {
 	box-shadow: 0 0 1rem var(--black) inset;
 }
 
+/* HEADINGS */
+h1 {
+	color: currentColor;
+	text-decoration: underline 0.25rem var(--accent);
+}
+
+/* HIGHLIGHT */
+mark {
+	color: currentColor;
+	text-decoration: underline 0.25rem var(--accent);
+}
+
 /* TOOLS */
 div.dark section.tools {
-	background-color: var(--accent);
+	background-color: var(--base2);
 	color: var(--contrast);
 }
 
@@ -50,12 +79,28 @@ div.dark polygon.base {
 
 div.dark path.contrast,
 div.dark polygon.contrast {
-	fill: var(--accent);
+	fill: var(--base2);
 }
 
 /* WORK */
+div.dark section.work a:hover,
+div.dark section.work a:focus {
+	background-color: var(--base2);
+	color: currentColor;
+	box-shadow: none;
+}
+
 div.dark section.work a:active {
-	color: var(--contrast);
+	background-color: var(--accent);
+}
+
+/* ABOUT */
+div.about {
+	background-color: var(--base2);
+}
+
+div.about h2 {
+	color: currentColor;
 }
 
 /* CONTACT */
@@ -73,19 +118,29 @@ div.dark section.contact li {
 
 div.dark section.contact li:hover,
 div.dark section.contact li:focus {
-	box-shadow: 0 0 0 0.0625rem var(--accent);
+	background-color: var(--base2);
+	color: currentColor;
 }
 
 div.dark section.contact li:hover button,
 div.dark section.contact li:focus button {
-	fill: var(--accent);
+	border-color: currentColor;
 }
 
 div.dark section.contact li:active {
+	background-color: var(--accent);
 	color: currentColor;
 }
 
 div.dark section.contact li:active button {
 	border-color: currentColor;
-	fill: var(--contrast);
+}
+
+div.dark section.contact button:hover,
+div.dark section.contact button:focus {
+	background-color: var(--base3);
+}
+
+div.dark section.contact button:active {
+	background-color: var(--accent);
 }

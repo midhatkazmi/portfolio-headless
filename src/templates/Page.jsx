@@ -28,12 +28,19 @@ const Page = ({ pageID }) => {
 					{/* <main className="about"> */}
 					{/* <title>{`${restData.title.rendered} | Midhat Kazmi`}</title> */}
 					<div className="about">
-						<section id="About" className="content-width">
+						{/* <section id="About" className="content-width">
 							<div
 								dangerouslySetInnerHTML={{
 									__html: restData.content.rendered,
 								}}
-							></div>
+							></div> */}
+						<section
+							id="About"
+							className="content-width"
+							dangerouslySetInnerHTML={{
+								__html: restData.content.rendered,
+							}}
+						>
 							{/* <div className="content-width">
 							<div className="tools">
 								{restData.acf.tool.map((badge) => (
