@@ -1,25 +1,91 @@
-.dark,
-.dark * {
+/* VARIABLES */
+div.dark,
+div.dark * {
+	--gray1: hsl(0, 0%, 10%);
+	--gray2: hsl(0, 0%, 20%);
 	--base: var(--gray1);
 	--base2: var(--gray2);
 	--contrast: var(--white);
-	--accent: mediumturquoise;
-	--accent-tint: rgba(72, 209, 204, 0.1);
 }
 
-.dark {
+/* BODY */
+div.dark {
 	background-color: var(--base);
-}
-
-.dark main.work button:not(.active) {
 	color: var(--contrast);
 }
 
-.dark main.work button:not(.active):hover,
-.dark main.work button:not(.active):focus {
-	color: var(--accent);
+/* HEADER */
+div.dark header {
+	fill: var(--contrast);
+	box-shadow: 0 0 1rem var(--black);
 }
 
-.dark main.work button:not(.active):active {
-	color: var(--base);
+div.dark header a:active {
+	color: var(--contrast);
+	fill: currentColor;
+}
+
+div.dark header button:active {
+	fill: var(--contrast);
+}
+
+/* FOOTER */
+div.dark footer {
+	box-shadow: 0 0 1rem var(--black) inset;
+}
+
+/* TOOLS */
+div.dark section.tools {
+	background-color: var(--accent);
+	color: var(--contrast);
+}
+
+div.dark path.base,
+div.dark rect.base,
+div.dark circle.base,
+div.dark ellipse.base,
+div.dark polygon.base {
+	fill: currentColor;
+}
+
+div.dark path.contrast,
+div.dark polygon.contrast {
+	fill: var(--accent);
+}
+
+/* WORK */
+div.dark section.work a:active {
+	color: var(--contrast);
+}
+
+/* CONTACT */
+div.dark section.contact {
+	fill: currentColor;
+}
+
+div.dark section.contact button {
+	fill: var(--contrast);
+}
+
+div.dark section.contact li {
+	box-shadow: 0 0 1rem var(--black);
+}
+
+div.dark section.contact li:hover,
+div.dark section.contact li:focus {
+	box-shadow: 0 0 0 0.0625rem var(--accent);
+}
+
+div.dark section.contact li:hover button,
+div.dark section.contact li:focus button {
+	fill: var(--accent);
+}
+
+div.dark section.contact li:active {
+	color: currentColor;
+}
+
+div.dark section.contact li:active button {
+	border-color: currentColor;
+	fill: var(--contrast);
 }
