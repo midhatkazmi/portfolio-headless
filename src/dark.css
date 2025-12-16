@@ -52,13 +52,13 @@ div.dark footer {
 }
 
 /* HEADINGS */
-h1 {
+div.dark h1 {
 	color: currentColor;
 	text-decoration: underline 0.25rem var(--accent);
 }
 
 /* HIGHLIGHT */
-mark {
+div.dark mark {
 	color: currentColor;
 	text-decoration: underline 0.25rem var(--accent);
 }
