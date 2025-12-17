@@ -54,7 +54,6 @@ div.dark footer {
 /* HEADINGS */
 div.dark h1 {
 	color: currentColor;
-	text-decoration: underline 0.25rem var(--accent);
 }
 
 /* HIGHLIGHT */
@@ -95,11 +94,11 @@ div.dark section.work a:active {
 }
 
 /* ABOUT */
-div.about {
+div.dark div.about {
 	background-color: var(--base2);
 }
 
-div.about h2 {
+div.dark div.about h2 {
 	color: currentColor;
 }
 
